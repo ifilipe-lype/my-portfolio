@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Header() {
@@ -10,11 +11,15 @@ export default function Header() {
         <nav className="flex md:flex-row flex-col md:items-center justify-between">
           <div className="flex justify-between items-center">
             <h1 className="font-extrabold overflow-hidden flex items-center">
-              <img
-                src="/avatar.jpg"
-                alt="Filipe André's Picture"
-                className="w-10 h-10 rounded-full object-contain object-center"
-              />
+              <div className="relative w-10 h-10 rounded-full overflow-hidden">
+                <Image
+                  src="/avatar.jpg"
+                  alt="Filipe André's Picture"
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
+                />
+              </div>
               <span className="ml-4 text-lg text-gray-700 lg:text-xl">
                 Filipe André
               </span>
@@ -48,17 +53,23 @@ export default function Header() {
             <ul className="flex md:flex-row flex-col items-center md:mr-4 lg:mr-8 text-gray-500">
               <li className="bg-gray-50 hover:text-gray-700 transition hover:bg-gray-100 md:bg-transparent md:hover:bg-transparent md:m-0 my-2 rounded w-full md:w-auto">
                 <Link href="">
-                  <a className="flex w-full px-4 py-1 focus:outline-none">Services</a>
+                  <a className="flex w-full px-4 py-1 focus:outline-none">
+                    Services
+                  </a>
                 </Link>
               </li>
               <li className="bg-gray-50 hover:text-gray-700 transition hover:bg-gray-100 md:bg-transparent md:hover:bg-transparent md:m-0 my-2 rounded w-full md:w-auto">
                 <Link href="">
-                  <a className="flex w-full px-4 py-1 focus:outline-none">Portfolio</a>
+                  <a className="flex w-full px-4 py-1 focus:outline-none">
+                    Portfolio
+                  </a>
                 </Link>
               </li>
               <li className="bg-gray-50 hover:text-gray-700 transition hover:bg-gray-100 md:bg-transparent md:hover:bg-transparent md:m-0 my-2 rounded w-full md:w-auto">
                 <Link href="">
-                  <a className="flex w-full px-4 py-1 focus:outline-none">About me</a>
+                  <a className="flex w-full px-4 py-1 focus:outline-none">
+                    About me
+                  </a>
                 </Link>
               </li>
             </ul>
