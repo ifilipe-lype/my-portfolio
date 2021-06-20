@@ -20,7 +20,7 @@ export default function Home() {
           <div className="container py-8 lg:py-16 flex md:flex-row flex-col-reverse max-w-screen-lg md:justify-between">
             <article className="md:w-1/2 transform md:transform-none py-4 -translate-y-32 z-10 bg-white dark:bg-transparent bg-opacity-50 lg:bg-opacity-0 text-gray-800 dark:text-white md:mt-0 md:pr-4 text-center lg:text-left">
               <h4 className="text-lg text-gray-600 dark:text-gray-200 mb-1">Hello, world!</h4>
-              <h1 className="lg:text-5xl text-3xl">I'm Lype</h1>
+              <h1 className="lg:text-5xl text-3xl">I&apos;m Lype</h1>
               <h3 className="text-2xl text-indigo-500 lg:text-4xl">
                 Software Developer
               </h3>
