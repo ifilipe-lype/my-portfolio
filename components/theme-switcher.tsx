@@ -18,7 +18,7 @@ export default function ThemeSwitcher(){
     <button className="outline-none focus:outline-none" onClick={toggleTheme}>
       {isDark() ? (
         <svg
-          className="w-6 h-6 text-gray-1 fill-current"
+          className="w-6 h-6 text-white hover:text-yellow-300 transition fill-current"
           xmlns="http://www.w3.org/2000/svg"
           enableBackground="new 0 0 24 24"
           viewBox="0 0 24 24"
@@ -28,7 +28,7 @@ export default function ThemeSwitcher(){
         </svg>
       ) : (
         <svg
-          className="w-6 h-6 fill-current text-gray-dark"
+          className="w-6 h-6 fill-current text-gray-700 transition hover:text-gray-900"
           xmlns="http://www.w3.org/2000/svg"
           enableBackground="new 0 0 24 24"
           viewBox="0 0 24 24"
