@@ -8,7 +8,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="shadow-sm sticky top-0 bg-white z-50">
+    <header className="shadow-sm sticky top-0 bg-white dark:bg-gray-800 z-50">
       <div className="container py-4 max-w-screen-lg">
         <nav className="flex md:flex-row flex-col md:items-center justify-between">
           <div className="flex justify-between items-center">
@@ -22,7 +22,7 @@ export default function Header() {
                   objectPosition="center"
                 />
               </div>
-              <span className="ml-4 text-lg text-gray-700 lg:text-xl">
+              <span className="ml-4 text-lg dark:text-white text-gray-700 lg:text-xl">
                 Filipe André
               </span>
             </h1>
@@ -33,7 +33,7 @@ export default function Header() {
               </div>
               <button
                 onClick={() => setIsMenuOpen((oldValue) => !oldValue)}
-                className="ml-4 outline-none text-indigo-400 focus:ring-indigo-500 focus:text-indigo-500 focus:outline-none md:hidden flex items-center justify-center"
+                className="ml-6 outline-none text-indigo-400 focus:ring-indigo-500 focus:text-indigo-500 focus:outline-none md:hidden flex items-center justify-center"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -58,28 +58,28 @@ export default function Header() {
               isMenuOpen ? 'flex' : 'hidden'
             } md:flex py-4 md:py-0 md:flex-row flex-col md:items-center justify-between`}
           >
-            <div className="hidden items-center md:flex mr-4">
+            <div className="hidden items-center md:flex mr-5">
               <ThemeSwitcher />
             </div>
 
             <ul className="flex md:flex-row flex-col text-center items-center md:mr-4 lg:mr-8 text-gray-500 font-light">
-              <li className="bg-gray-50 hover:text-gray-700 transition hover:bg-gray-100 md:bg-transparent md:hover:bg-transparent md:m-0 my-2 rounded w-full md:w-auto">
+              <li className="bg-gray-50 dark:bg-gray-700 dark:text-gray-200 md:dark:bg-transparent dark:hover:text-indigo-500 hover:text-gray-700 transition hover:bg-gray-100 md:bg-transparent md:hover:bg-transparent md:m-0 my-2 rounded w-full md:w-auto">
                 <Link href="">
-                  <a className="flex w-full px-4 py-1 focus:outline-none">
+                  <a className="flex flex-col items-center w-full px-4 py-1 focus:outline-none">
                     Services
                   </a>
                 </Link>
               </li>
-              <li className="bg-gray-50 hover:text-gray-700 transition hover:bg-gray-100 md:bg-transparent md:hover:bg-transparent md:m-0 my-2 rounded w-full md:w-auto">
+              <li className="bg-gray-50 dark:bg-gray-700 dark:text-gray-200 md:dark:bg-transparent dark:hover:text-indigo-500 hover:text-gray-700 transition hover:bg-gray-100 md:bg-transparent md:hover:bg-transparent md:m-0 my-2 rounded w-full md:w-auto">
                 <Link href="">
-                  <a className="flex w-full px-4 py-1 focus:outline-none">
+                  <a className="flex flex-col items-center w-full px-4 py-1 focus:outline-none">
                     Portfolio
                   </a>
                 </Link>
               </li>
-              <li className="bg-gray-50 hover:text-gray-700 transition hover:bg-gray-100 md:bg-transparent md:hover:bg-transparent md:m-0 my-2 rounded w-full md:w-auto">
+              <li className="bg-gray-50 dark:bg-gray-700 dark:text-gray-200 md:dark:bg-transparent dark:hover:text-indigo-500 hover:text-gray-700 transition hover:bg-gray-100 md:bg-transparent md:hover:bg-transparent md:m-0 my-2 rounded w-full md:w-auto">
                 <Link href="">
-                  <a className="flex w-full px-4 py-1 focus:outline-none">
+                  <a className="flex flex-col items-center w-full px-4 py-1 focus:outline-none">
                     About me
                   </a>
                 </Link>
@@ -92,7 +92,7 @@ export default function Header() {
 
             <div className="mt-8 flex md:hidden items-center">
               <ul className="flex w-full lg:w-9/12 items-center justify-evenly">
-                <li className="cursor-pointer flex items-center justify-center text-gray-400 hover:text-gray-700">
+                <li className="cursor-pointer flex items-center justify-center text-gray-400 dark:hover:text-gray-200 hover:text-gray-700">
                   <Link href="#">
                     <span>
                       <svg
@@ -113,7 +113,7 @@ export default function Header() {
                     </span>
                   </Link>
                 </li>
-                <li className="cursor-pointer flex items-center justify-center text-gray-400 hover:text-gray-700">
+                <li className="cursor-pointer flex items-center justify-center text-gray-400 dark:hover:text-gray-200 hover:text-gray-700">
                   <Link href="#">
                     <span>
                       <svg
@@ -134,7 +134,7 @@ export default function Header() {
                     </span>
                   </Link>
                 </li>
-                <li className="cursor-pointer flex items-center justify-center text-gray-400 hover:text-gray-700">
+                <li className="cursor-pointer flex items-center justify-center text-gray-400 dark:hover:text-gray-200 hover:text-gray-700">
                   <Link href="#">
                     <span>
                       <svg
@@ -155,7 +155,7 @@ export default function Header() {
                     </span>
                   </Link>
                 </li>
-                <li className="cursor-pointer flex items-center justify-center text-gray-400 hover:text-gray-700">
+                <li className="cursor-pointer flex items-center justify-center text-gray-400 dark:hover:text-gray-200 hover:text-gray-700">
                   <Link href="#">
                     <span>
                       <svg
