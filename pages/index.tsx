@@ -1,9 +1,9 @@
-import Head from 'next/head';
-import Image from "next/image";
+import Head from 'next/head'
+import Image from 'next/image'
 
-import codingImageSrc from "../public/undraw_webdev.svg"
+import codingImageSrc from '../public/undraw_webdev.svg'
 
-import Header from '../components/header';
+import Header from '../components/header'
 
 export default function Home() {
   return (
@@ -17,26 +17,32 @@ export default function Home() {
       <main className="">
         <Header />
         <section className="">
-          <div className="container py-8 lg:py-16 items-centerx flex md:flex-row flex-col-reverse max-w-screen-lg md:justify-between">
-            <article className="md:w-1/2 transform md:transform-none py-4 -translate-y-32 z-10 bg-white bg-opacity-50 lg:bg-opacity-0 text-gray-800 xmt-8 md:mt-0 md:pr-4 text-center lg:text-left">
-              <h4 className="text-lg">Hello, world!</h4>
-              <h1 className="lg:text-5xl text-indigo-600 text-3xl font-semibold">I'm Lype</h1>
-              <h3 className="text-2xl lg:text-4xl font-semibold">Software Developer</h3>
+          <div className="container py-8 lg:py-16 flex md:flex-row flex-col-reverse max-w-screen-lg md:justify-between">
+            <article className="md:w-1/2 transform md:transform-none py-4 -translate-y-32 z-10 bg-white bg-opacity-50 lg:bg-opacity-0 text-gray-800 md:mt-0 md:pr-4 text-center lg:text-left">
+              <h4 className="text-lg text-gray-600 mb-1">Hello, world!</h4>
+              <h1 className="lg:text-5xl text-3xl">I'm Lype</h1>
+              <h3 className="text-2xl text-indigo-600 lg:text-4xl">
+                Software Developer
+              </h3>
               <p className="py-4 text-lg">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero neque incidunt et tenetur placeat unde facilis nostrum at exercitationem.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
+                neque incidunt et tenetur placeat unde facilis nostrum at
+                exercitationem.
               </p>
-              <div className="flex lg:flex-row text-center flex-col items-center mt-8">
-                <span className="mb-4 lg:mb-0 w-full px-4 py-2 md:px-6 md:py-3 lg:mr-8 bg-gray-900 text-white rounded-lg">
-                  Hire me
+              <div className="flex lg:flex-row text-center flex-col-reverse justify-start items-center mt-8">
+                <span className="w-full transition md:w-auto shadow px-4 py-2 md:px-6 md:py-3 bg-gray-700 hover:bg-gray-900 text-white rounded-lg">
+                  See my works
                 </span>
-
-                <span className="w-full px-4 py-2 md:px-6 md:py-3 border border-gray-200 text-gray-700 rounded-lg">
-                  See what I got for you
+                <span className="mb-4 lg:mb-0 transition w-full md:w-auto px-4 py-2 md:px-6 md:py-3 lg:ml-8 md:border bg-indigo-500 md:bg-white text-white hover:bg-indigo-600 border-indigo-500 md:text-indigo-600 md:hover:bg-indigo-50 rounded-lg">
+                  Hire me
                 </span>
               </div>
             </article>
             <div className="relative z-0 md:w-1/2">
-              <Image src={codingImageSrc} alt="Illustration of a programmer coding..." />
+              <Image
+                src={codingImageSrc}
+                alt="Illustration of a programmer coding..."
+              />
             </div>
           </div>
         </section>

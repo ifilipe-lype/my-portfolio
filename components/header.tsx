@@ -26,7 +26,7 @@ export default function Header() {
             </h1>
             <button
               onClick={() => setIsMenuOpen((oldValue) => !oldValue)}
-              className="outline-none text-gray-500 focus:ring-indigo-500 focus:text-indigo-500 focus:outline-none md:hidden flex items-center justify-center"
+              className="outline-none text-indigo-400 focus:ring-indigo-500 focus:text-indigo-500 focus:outline-none md:hidden flex items-center justify-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ export default function Header() {
               isMenuOpen ? 'flex' : 'hidden'
             } md:flex py-4 md:py-0 md:flex-row flex-col md:items-center justify-between`}
           >
-            <ul className="flex md:flex-row flex-col items-center md:mr-4 lg:mr-8 text-gray-500">
+            <ul className="flex md:flex-row flex-col items-center md:mr-4 lg:mr-8 text-gray-500 font-light">
               <li className="bg-gray-50 hover:text-gray-700 transition hover:bg-gray-100 md:bg-transparent md:hover:bg-transparent md:m-0 my-2 rounded w-full md:w-auto">
                 <Link href="">
                   <a className="flex w-full px-4 py-1 focus:outline-none">
@@ -74,7 +74,7 @@ export default function Header() {
               </li>
             </ul>
 
-            <button className="px-4 md:px-6 py-2 w-full md:w-auto mt-4 md:mt-0 bg-gray-700 hover:bg-gray-900 transition text-white shadow md:text-sm rounded-xl focus:outline-none">
+            <button className="px-4 md:px-6 py-2 w-full md:w-auto mt-4 md:mt-0 bg-indigo-500 hover:bg-indigo-700 transition text-white shadow md:text-sm rounded-xl focus:outline-none">
               Hire me
             </button>
 
