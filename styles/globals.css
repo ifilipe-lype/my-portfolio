@@ -3,5 +3,18 @@
 @tailwind utilities;
 
 body {
-    @apply dark:bg-gray-900;
+    @apply dark:bg-gray-900 text-gray-600 overflow-x-hidden;
+}
+
+.navigation-items li {
+    @apply transition hover:text-purple-500 dark:hover:text-purple-500 my-2 w-full bg-gray-50 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-800 dark:text-gray-200 rounded-lg;
+}
+.navigation-items li a {
+    @apply flex flex-col items-center w-full px-4 py-1 focus:outline-none;
+}
+
+@screen md {
+    .navigation-items li {
+        @apply bg-transparent hover:bg-transparent dark:hover:bg-transparent my-0 dark:bg-transparent w-auto dark:hover:text-purple-500;
+    }
 }

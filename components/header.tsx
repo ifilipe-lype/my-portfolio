@@ -8,23 +8,26 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="shadow-sm sticky top-0 bg-white dark:bg-gray-800 z-50">
+    <header className="shadow-sm sticky top-0 bg-white md:bg-opacity-90 md:dark:bg-opacity-80 dark:bg-gray-900 z-50">
       <div className="container py-4 max-w-screen-lg">
         <nav className="flex md:flex-row flex-col md:items-center justify-between">
           <div className="flex justify-between items-center">
-            <h1 className="font-extrabold overflow-hidden flex items-center">
-              <div className="relative w-10 h-10 rounded-full overflow-hidden">
+            <h1 className="flex items-center">
+              <div className="relative w-8 h-8 md:w-10 md:h-10 border mr-4 rounded-full overflow-hidden">
                 <Image
-                  src="/avatar.jpg"
+                  src="/lype.jpg"
                   alt="Filipe André's Picture"
                   layout="fill"
-                  objectFit="contain"
-                  objectPosition="center"
+                  objectFit="cover"
+                  objectPosition="top"
                 />
               </div>
-              <span className="ml-4 text-lg dark:text-white text-gray-700 lg:text-xl">
-                Filipe André
+              <div className="flex items-center">
+              <span className="hidden text-4xl leading-none text-purple-500">.</span>
+              <span className="md:text-lg leading-none dark:text-white text-gray-700 font-semibold">
+                Lype
               </span>
+              </div>
             </h1>
 
             <div className="flex items-center">
@@ -33,7 +36,7 @@ export default function Header() {
               </div>
               <button
                 onClick={() => setIsMenuOpen((oldValue) => !oldValue)}
-                className="ml-6 outline-none text-indigo-400 focus:ring-indigo-500 focus:text-indigo-500 focus:outline-none md:hidden flex items-center justify-center"
+                className="ml-6 outline-none text-purple-400 focus:ring-purple-500 focus:text-purple-500 focus:outline-none md:hidden flex items-center justify-center"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -62,31 +65,38 @@ export default function Header() {
               <ThemeSwitcher />
             </div>
 
-            <ul className="flex md:flex-row flex-col text-center items-center md:mr-4 lg:mr-8 text-gray-500 font-light">
-              <li className="bg-gray-50 dark:bg-gray-700 dark:text-gray-200 md:dark:bg-transparent dark:hover:text-indigo-500 hover:text-gray-700 transition hover:bg-gray-100 md:bg-transparent md:hover:bg-transparent md:m-0 my-2 rounded w-full md:w-auto">
+            <ul className="navigation-items flex md:flex-row text-base flex-col text-center items-center md:mr-4 lg:mr-8 text-gray-500 dark:text-gray-200 font-light">
+              <li>
                 <Link href="">
-                  <a className="flex flex-col items-center w-full px-4 py-1 focus:outline-none">
+                  <a>
+                    Home
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="">
+                  <a>
                     Services
                   </a>
                 </Link>
               </li>
-              <li className="bg-gray-50 dark:bg-gray-700 dark:text-gray-200 md:dark:bg-transparent dark:hover:text-indigo-500 hover:text-gray-700 transition hover:bg-gray-100 md:bg-transparent md:hover:bg-transparent md:m-0 my-2 rounded w-full md:w-auto">
+              <li>
                 <Link href="">
-                  <a className="flex flex-col items-center w-full px-4 py-1 focus:outline-none">
+                  <a>
                     Portfolio
                   </a>
                 </Link>
               </li>
-              <li className="bg-gray-50 dark:bg-gray-700 dark:text-gray-200 md:dark:bg-transparent dark:hover:text-indigo-500 hover:text-gray-700 transition hover:bg-gray-100 md:bg-transparent md:hover:bg-transparent md:m-0 my-2 rounded w-full md:w-auto">
+              <li>
                 <Link href="">
-                  <a className="flex flex-col items-center w-full px-4 py-1 focus:outline-none">
+                  <a>
                     About me
                   </a>
                 </Link>
               </li>
             </ul>
 
-            <button className="px-4 md:px-6 py-2 w-full md:w-auto mt-4 md:mt-0 bg-indigo-500 hover:bg-indigo-700 transition text-white shadow md:text-sm rounded-xl focus:outline-none">
+            <button className="px-4 md:px-6 py-2 w-full md:w-auto mt-4 md:mt-0 bg-purple-500 hover:bg-purple-700 transition text-white shadow md:text-sm rounded-xl focus:outline-none">
               Hire me
             </button>
 
