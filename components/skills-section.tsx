@@ -18,7 +18,7 @@ const SkillCard: FC<Skill> = ({ logo, name }) => {
           alt={name}
         />
       </div>
-      <h5 className="md:text-lg text-gray-700 dark:text-white">{name}</h5>
+      <h5 className="md:text-lg text-white">{name}</h5>
     </article>
   )
 }
@@ -39,16 +39,16 @@ const skills: Skill[] = [
 
 const SkillSection: FC = () => {
   return (
-    <section className="py-16 lg:py-24 dark:bg-gray-800">
+    <section className="py-16 lg:py-24 bg-purple-900">
       <div className="container max-w-screen-lg flex flex-col justify-center mb-10 md:mb-16 items-center">
-        <header className="flex flex-col dark:text-white justify-center items-center text-center">
+        <header className="flex flex-col text-white justify-center items-center text-center">
           <h1 className="text-xl md:text-2xl lg:text-3xl uppercase mb-2">
             My Skills
           </h1>
           <h4 className="lg:text-lg">
             See what tools I use to bring excelents solution alive
           </h4>
-          <div className="h-1 w-5/12 rounded-full bg-purple-500 mt-2"></div>
+          <div className="h-1 w-5/12 rounded-full bg-white mt-2"></div>
         </header>
       </div>
 
