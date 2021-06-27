@@ -1,7 +1,3 @@
-import Image from 'next/image'
-
-import imgSrc from '../public/avatar-original.jpg'
-
 import ProjectCard from './projectCard'
 
 const mockedProjectList = [
@@ -10,7 +6,7 @@ const mockedProjectList = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit Beatae, quas praesentium nesciunt a corporis eligendi nobis.',
     date: Date.now(),
-    image: imgSrc,
+    image: "/avatar-original.jpg",
     tecnologies: ["ReactJS", "Tailwindcss", "NextJS"]
   },
   {
@@ -18,7 +14,7 @@ const mockedProjectList = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit Beatae, quas praesentium nesciunt a corporis eligendi nobis.',
     date: Date.now(),
-    image: imgSrc,
+    image: "/avatar-original.jpg",
     tecnologies: ["ReactJS", "Tailwindcss", "NextJS"]
   },
   {
@@ -26,7 +22,7 @@ const mockedProjectList = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit Beatae, quas praesentium nesciunt a corporis eligendi nobis.',
     date: Date.now(),
-    image: imgSrc,
+    image: "/avatar-original.jpg",
     tecnologies: ["ReactJS", "Tailwindcss", "NextJS"]
   },
   {
@@ -34,7 +30,7 @@ const mockedProjectList = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit Beatae, quas praesentium nesciunt a corporis eligendi nobis.',
     date: Date.now(),
-    image: imgSrc,
+    image: "/avatar-original.jpg",
     tecnologies: ["ReactJS", "Tailwindcss", "NextJS"]
   },
   {
@@ -42,7 +38,7 @@ const mockedProjectList = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit Beatae, quas praesentium nesciunt a corporis eligendi nobis.',
     date: Date.now(),
-    image: imgSrc,
+    image: "/avatar-original.jpg",
     tecnologies: ["ReactJS", "Tailwindcss", "NextJS"]
   },
   {
@@ -50,7 +46,7 @@ const mockedProjectList = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit Beatae, quas praesentium nesciunt a corporis eligendi nobis.',
     date: Date.now(),
-    image: imgSrc,
+    image: "/avatar-original.jpg",
     tecnologies: ["ReactJS", "Tailwindcss", "NextJS"]
   },
 ]
