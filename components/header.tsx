@@ -76,13 +76,6 @@ export default function Header() {
               <li>
                 <Link href="">
                   <a>
-                    Services
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="">
-                  <a>
                     Portfolio
                   </a>
                 </Link>
@@ -90,7 +83,14 @@ export default function Header() {
               <li>
                 <Link href="">
                   <a>
-                    About me
+                    Skills
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="">
+                  <a>
+                    About me / Contacts
                   </a>
                 </Link>
               </li>

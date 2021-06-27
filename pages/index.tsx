@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Header from '../components/header';
 import HeroSection from '../components/hero-section';
 import PortfolioSection from '../components/portfolio-section';
+import SkillSection from '../components/skills-section';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Header />
         <HeroSection />
         <PortfolioSection />
+        <SkillSection />
       </main>
     </div>
   )
