@@ -29,7 +29,7 @@ export default function HeroSection() {
               Hire me
             </span>
             <Link href="#portfolio">
-              <span className="w-full transition cursor-pointer lg:w-auto shadow px-4 py-2 lg:px-6 lg:py-3 bg-gray-900 hover:bg-gray-700 text-gray-100 rounded-lg">
+              <span className="w-full transition cursor-pointer lg:w-auto shadow px-4 py-2 lg:px-6 lg:py-3 bg-gray-700 hover:bg-gray-800 text-gray-100 rounded-lg">
                 See my works
               </span>
             </Link>
