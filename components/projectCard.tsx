@@ -18,9 +18,10 @@ const ProjectCard: FC<ProjectProps> = ({
   return (
     <article>
       <figure className="relative rounded overflow-hidden">
-        <Image
+        <img
           src={image}
           alt={name}
+          layout="fill"
           className="w-full flex rounded h-full object-cover"
         />
       </figure>
