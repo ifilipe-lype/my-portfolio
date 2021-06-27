@@ -10,7 +10,7 @@ export default function HeroSection() {
             backgroundImage: `url(/avatar.jpg)`,
           }}
         ></div>
-        <div className="w-full lg:w-8/12 h-full bg-gray-900 bg-opacity-30 absolute right-0"></div>
+        <div className="w-full lg:w-8/12 h-full bg-gray-900 bg-opacity-70 md:bg-opacity-30 absolute right-0"></div>
         <article className="md:w-1/2 rounded-lg z-10 text-white lg:text-gray-600 dark:text-white text-center lg:text-left">
           <h4 className="text-lg mb-1 lg:text-gray-400 lg:dark:text-gray-400">Hello, world!</h4>
           <h1 className="lg:text-5xl text-3xl mb-2">Filipe André</h1>
