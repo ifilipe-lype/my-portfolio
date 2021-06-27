@@ -8,7 +8,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="shadow-sm sticky top-0 bg-white md:bg-opacity-90 md:dark:bg-opacity-80 dark:bg-gray-900 z-50">
+    <header className="shadow-sm sticky top-0 bg-white bg-opacity-90 dark:bg-opacity-90 dark:bg-gray-900 z-50">
       <div className="container py-4 max-w-screen-lg">
         <nav className="flex md:flex-row flex-col md:items-center justify-between">
           <div className="flex justify-between items-center">
