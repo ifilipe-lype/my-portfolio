@@ -23,10 +23,12 @@ export default function Header() {
                 />
               </div>
               <div className="flex items-center">
-              <span className="hidden text-4xl leading-none text-purple-500">.</span>
-              <span className="md:text-lg leading-none dark:text-white text-gray-700 font-semibold">
-                Lype
-              </span>
+                <span className="hidden text-4xl leading-none text-purple-500">
+                  .
+                </span>
+                <span className="md:text-lg leading-none dark:text-white text-gray-700 font-semibold">
+                  Lype
+                </span>
               </div>
             </h1>
 
@@ -67,32 +69,16 @@ export default function Header() {
 
             <ul className="navigation-items flex md:flex-row text-base flex-col text-center items-center md:mr-4 lg:mr-8 text-gray-500 dark:text-gray-200 font-light">
               <li>
-                <Link href="">
-                  <a>
-                    Home
-                  </a>
-                </Link>
+                <span>Home</span>
               </li>
               <li>
-                <Link href="">
-                  <a>
-                    Portfolio
-                  </a>
-                </Link>
+                <span>Portfolio</span>
               </li>
               <li>
-                <Link href="">
-                  <a>
-                    Skills
-                  </a>
-                </Link>
+                <span>Skills</span>
               </li>
               <li>
-                <Link href="">
-                  <a>
-                    About me / Contacts
-                  </a>
-                </Link>
+                <span>About me / Contacts</span>
               </li>
             </ul>
 
