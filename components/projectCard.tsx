@@ -17,7 +17,7 @@ const ProjectCard: FC<ProjectProps> = ({
 }) => {
   return (
     <article>
-      <figure className="relative w-full h-64 lg:h-72 rounded object-center object-cover">
+      <figure className="relative bg-gray-200 w-full h-64 lg:h-72 rounded object-center object-cover">
         <Image
           src={image}
           alt={name}
