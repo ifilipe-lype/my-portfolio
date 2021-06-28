@@ -67,7 +67,7 @@ export default function PortfolioSection() {
         <div className="relative grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {
             mockedProjectList.map((project, index) => (
-              <div className="" key={index}>
+              <div key={index}>
                 <ProjectCard {...project} />
               </div>
             ))
