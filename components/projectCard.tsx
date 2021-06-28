@@ -17,12 +17,12 @@ const ProjectCard: FC<ProjectProps> = ({
 }) => {
   return (
     <article>
-      <figure className="relative rounded overflow-hidden">
-        <img
+      <figure className="relative w-full h-64 lg:h-72 rounded object-center object-cover">
+        <Image
           src={image}
           alt={name}
           layout="fill"
-          className="w-full flex rounded h-full object-cover"
+          objectFit="cover"
         />
       </figure>
       <figcaption className="mt-2">
