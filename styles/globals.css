@@ -18,3 +18,9 @@ body {
         @apply bg-transparent hover:bg-transparent dark:hover:bg-transparent my-0 dark:bg-transparent w-auto dark:hover:text-purple-500;
     }
 }
+
+.glow-hover:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(109, 40, 207);
+    transition: all .3s;
+}
