@@ -98,7 +98,8 @@ export default function Header() {
               </li>
             </ul>
 
-            <button className="px-6 py-2 w-auto bg-purple-500 hover:bg-purple-700 transition text-white shadow text-sm rounded-xl focus:outline-none">
+            <button
+              className="px-6 py-2 w-auto glow-hover bg-purple-500 hover:bg-purple-700 transition text-white shadow text-sm rounded-xl focus:outline-none">
               Hire me
             </button>
           </div>

@@ -72,26 +72,14 @@ export default function HeroSection() {
             variants={childVariants}
             className="flex w-9/12 mx-auto md:w-full lg:mx-0 md:flex-row text-center flex-col items-center mt-8"
           >
-            <motion.span
-              whileHover={{
-                boxShadow: '0 0 8px rgb(139, 92, 246)',
-                scale: [1, 1.1, 1],
-              }}
-              transition={{duration: .5}}
-              className="mb-4 md:mb-0 cursor-pointer transition w-full lg:w-auto px-4 py-2 lg:px-6 lg:py-3 md:mr-8 bg-purple-500 hover:bg-purple-600 text-white rounded-lg"
+            <span className="mb-4 md:mb-0 cursor-pointer glow-hover transition w-full lg:w-auto px-4 py-2 lg:px-6 lg:py-3 md:mr-8 bg-purple-500 hover:bg-purple-600 text-white rounded-lg"
             >
               Hire me
-            </motion.span>
+            </span>
             <Link href="#portfolio">
-              <motion.span
-                whileHover={{
-                  scale: [1, 1.1, 1],
-                  // boxShadow: '0 0 8px rgb(139, 92, 246)',
-                }}
-                transition={{duration: .3}}
-                className="w-full transition cursor-pointer lg:w-auto shadow px-4 py-2 lg:px-6 lg:py-3 bg-gray-700 hover:bg-gray-800 text-gray-100 rounded-lg">
+              <span className="w-full transition glow-hover cursor-pointer lg:w-auto shadow px-4 py-2 lg:px-6 lg:py-3 bg-gray-700 hover:bg-gray-800 text-gray-100 rounded-lg">
                 See my works
-              </motion.span>
+              </span>
             </Link>
           </motion.div>
         </motion.article>
