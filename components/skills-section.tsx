@@ -47,7 +47,7 @@ const skillsListVariants = {
       mass: 0.4, // the weight of the component
       damping: 8, // the bounce back-and-forth
       when: 'beforeChildren',
-      staggerChildren: 0.3,
+      staggerChildren: 0.25,
     }
   }
 }
