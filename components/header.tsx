@@ -14,7 +14,7 @@ const headerVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      delay: 0.5,
+      delay: 0.25,
       type: 'spring',
       stiffness: 80,
     },
