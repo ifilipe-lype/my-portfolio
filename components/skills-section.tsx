@@ -36,6 +36,7 @@ const skills: Skill[] = [
     { logo: "/icons/mongodb.png", name: "MongoDB"},
     { logo: "/icons/git.png", name: "Git"},
     { logo: "/icons/github.png", name: "Github"},
+    { logo: "/icons/jest.png", name: "TDD, Jest"},
 ]
 
 const skillsListVariants = {
