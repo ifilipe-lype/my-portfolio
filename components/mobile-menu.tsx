@@ -6,7 +6,7 @@ import ThemeSwitcher from './theme-switcher'
 import { FC } from 'react'
 
 interface MobileMenuProps {
-  show: Boolean,
+  show: Boolean
   hideMenu: () => {}
 }
 
@@ -17,7 +17,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, hideMenu }) => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ x: "-100vw", opacity: 0 }}
+          exit={{ x: '-100vw', opacity: 0 }}
           className="fixed h-screen w-full bg-transparent inset-0 z-40 flex flex-col items-center"
         >
           <div
@@ -31,20 +31,24 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, hideMenu }) => {
           >
             <div className="flex container justify-between py-4 items-center">
               <h1 className="flex items-center">
-                <div className="relative w-8 h-8 md:w-10 md:h-10 border mr-4 rounded-full overflow-hidden">
-                  <Image
-                    src="/lype.jpg"
-                    alt="Filipe André's Picture"
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition="top"
-                  />
-                </div>
-                <div className="flex items-center">
-                  <span className="leading-none dark:text-white text-gray-700 font-semibold">
-                    Lype
-                  </span>
-                </div>
+                <Link href="#" passHref>
+                  <a className="flex items-center">
+                    <div className="relative w-8 h-8 border mr-4 rounded-full overflow-hidden">
+                      <Image
+                        src="/lype.jpg"
+                        alt="Filipe André's Picture"
+                        layout="fill"
+                        objectFit="cover"
+                        objectPosition="top"
+                      />
+                    </div>
+                    <div className="flex items-center">
+                      <span className="md:text-lg leading-none dark:text-white text-gray-700 font-semibold">
+                        Lype
+                      </span>
+                    </div>
+                  </a>
+                </Link>
               </h1>
 
               <div className="flex items-center">
@@ -74,16 +78,32 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, hideMenu }) => {
             </div>
             <ul className="navigation-items container w-full flex text-base flex-col text-center items-center text-gray-500 dark:text-gray-200 font-light">
               <li>
-                <span>Home</span>
+                <Link href="#">
+                  <span>
+                    <a>Home</a>
+                  </span>
+                </Link>
               </li>
               <li>
-                <span>Portfolio</span>
+                <Link href="#portfolio">
+                  <span>
+                    <a>Portfolio</a>
+                  </span>
+                </Link>
               </li>
               <li>
-                <span>Skills</span>
+                <Link href="#skills">
+                  <span>
+                    <a>Skills</a>
+                  </span>
+                </Link>
               </li>
               <li>
-                <span>About me</span>
+                <Link href="#about">
+                  <span>
+                    <a>About me</a>
+                  </span>
+                </Link>
               </li>
             </ul>
 
@@ -93,7 +113,10 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, hideMenu }) => {
               <div className="mt-4 flex w-full items-center">
                 <ul className="flex w-full  items-center justify-evenly">
                   <li className="cursor-pointer flex items-center justify-center text-purple-300 hover:text-white">
-                    <Link href="https://www.linkedin.com/in/filipe-andr%C3%A9-25b9301b4/" passHref>
+                    <Link
+                      href="https://www.linkedin.com/in/filipe-andr%C3%A9-25b9301b4/"
+                      passHref
+                    >
                       <a target="blank">
                         <svg
                           aria-hidden="true"

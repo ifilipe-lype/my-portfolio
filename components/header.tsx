@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 
@@ -35,20 +36,24 @@ export default function Header() {
         <nav className="flex items-center justify-between">
           <div className="flex w-full md:w-auto justify-between items-center">
             <h1 className="flex items-center">
-              <div className="relative w-8 h-8 md:w-10 md:h-10 border mr-4 rounded-full overflow-hidden">
-                <Image
-                  src="/lype.jpg"
-                  alt="Filipe André's Picture"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="top"
-                />
-              </div>
-              <div className="flex items-center">
-                <span className="md:text-lg leading-none dark:text-white text-gray-700 font-semibold">
-                  Lype
-                </span>
-              </div>
+              <Link href="#" passHref>
+                <a className="flex items-center">
+                  <div className="relative w-8 h-8 md:w-10 md:h-10 border mr-4 rounded-full overflow-hidden">
+                    <Image
+                      src="/lype.jpg"
+                      alt="Filipe André's Picture"
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="top"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <span className="md:text-lg leading-none dark:text-white text-gray-700 font-semibold">
+                      Lype
+                    </span>
+                  </div>
+                </a>
+              </Link>
             </h1>
 
             <div className="flex items-center md:hidden">
@@ -77,31 +82,47 @@ export default function Header() {
             </div>
           </div>
 
-          <div
-            className="hidden md:flex items-center justify-between">
+          <div className="hidden md:flex items-center justify-between">
             <div className="items-center flex mr-5">
               <ThemeSwitcher />
             </div>
 
             <ul className="navigation-items flex text-base text-center items-center mr-4 lg:mr-8 text-gray-500 dark:text-gray-200 font-light">
               <li>
-                <span>Home</span>
+              <span>
+                  <Link href="#">
+                    <a>Home</a>
+                  </Link>
+                </span>
               </li>
               <li>
-                <span>Portfolio</span>
+              <span>
+                  <Link href="#portfolio">
+                    <a>Portfolio</a>
+                  </Link>
+                </span>
               </li>
               <li>
-                <span>Skills</span>
+              <span>
+                  <Link href="#skills">
+                    <a>Skills</a>
+                  </Link>
+                </span>
               </li>
               <li>
-                <span>About me</span>
+                <span>
+                  <Link href="#about">
+                    <a>About me</a>
+                  </Link>
+                </span>
               </li>
             </ul>
 
-            <button
-              className="px-6 py-2 w-auto glow-hover bg-purple-500 hover:bg-purple-700 transition text-white shadow text-sm rounded-xl focus:outline-none">
-              Hire me
-            </button>
+            <Link href="#about" passHref>
+              <a className="px-6 py-2 w-auto glow-hover bg-purple-500 hover:bg-purple-700 transition text-white shadow text-sm rounded-xl focus:outline-none">
+                Let&apos;s talk
+              </a>
+            </Link>
           </div>
           <MobileMenu show={isMenuOpen} hideMenu={() => setIsMenuOpen(false)} />
         </nav>
