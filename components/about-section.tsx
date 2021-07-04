@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 const AboutMeSection: FC = () => {
   return (
     <section
+      id="about"
       className="relative dark:bg-gray-800 bg-center bg-cover"
       style={{
         backgroundImage:
@@ -15,7 +16,11 @@ const AboutMeSection: FC = () => {
       <div className="absolute w-full h-full inset-0 bg-purple-900 bg-opacity-80"></div>
       <div className="relative py-16 lg:py-24 z-10 container max-w-screen-lg flex flex-col justify-center items-center">
         <div className="w-full flex flex-col  md:flex-row items-center justify-between">
-          <motion.div initial={{x: "-100vw", opacity: 0}} animate={{opacity: 1, x: 0}} className="relative hidden md:block bg-purple-900 bg-opacity-60 shadow-lg min-h-500 rounded-lg w-5/12">
+          <motion.div
+            initial={{ x: '-100vw', opacity: 0 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="relative hidden md:block bg-purple-900 bg-opacity-60 shadow-lg min-h-500 rounded-lg w-5/12"
+          >
             <Image
               src="/lype.jpg"
               layout="fill"
@@ -23,9 +28,15 @@ const AboutMeSection: FC = () => {
               className="block w-full h-auto object-cover object-top rounded-lg"
             />
           </motion.div>
-          <motion.div initial={{x: "100vw"}} animate={{ x: 0}} className="w-full md:w-7/12 md:py-8 flex items-center">
+          <motion.div
+            initial={{ x: '100vw' }}
+            animate={{ x: 0 }}
+            className="w-full md:w-7/12 md:py-8 flex items-center"
+          >
             <div className="pb-8 px-4  lg:p-8 shadow-lg bg-gray-900 bg-opacity-60 text-white md:rounded-l-none h-full rounded-md">
-              <motion.div initial={{y: 25, opacity: 0}} animate={{ y: -55, opacity: 1}}
+              <motion.div
+                initial={{ y: 25, opacity: 0 }}
+                animate={{ y: -55, opacity: 1 }}
                 style={{
                   backgroundImage: 'url(/lype.jpg)',
                 }}
@@ -76,17 +87,23 @@ const AboutMeSection: FC = () => {
               </div>
               <div className="py-4 text-center md:text-left text-sm md:text-base leading-tight font-light">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Repellendus error laudantium veniam voluptates, dolor
-                  inventore maiores placeat necessitatibus expedita? Sit
-                  recusandae praesentium in adipisci quos consectetur magnam
-                  nobis neque ducimus?
+                  I am a self-taught and very dedicated software developer with
+                  experience in building websites, web apps and Rest APIs.
+                </p>
+                <p className="mt-2">
+                  I always look forward to new learnings, experiences and
+                  challenges that can make me a better developer and an even
+                  better human being.
                 </p>
               </div>
               <div className="mt-4">
+                <h3 className="mb-4 text-sm md:text-base text-center md:text-left">Reach me by</h3>
                 <ul className="flex w-full md:w-6/12 text-gray-200 items-center justify-around md:justify-between">
                   <li className="cursor-pointer flex items-center justify-center transition transform hover:scale-125 hover:text-purple-500">
-                  <Link href="https://www.linkedin.com/in/filipe-andr%C3%A9-25b9301b4/" passHref>
+                    <Link
+                      href="https://www.linkedin.com/in/filipe-andr%C3%A9-25b9301b4/"
+                      passHref
+                    >
                       <a target="blank">
                         <svg
                           aria-hidden="true"
@@ -107,7 +124,7 @@ const AboutMeSection: FC = () => {
                     </Link>
                   </li>
                   <li className="cursor-pointer flex items-center justify-center transition transform hover:scale-125 hover:text-purple-500">
-                  <Link href="https://twitter.com/ifilipe_lype" passHref>
+                    <Link href="https://twitter.com/ifilipe_lype" passHref>
                       <a target="blank">
                         <svg
                           aria-hidden="true"
@@ -128,7 +145,7 @@ const AboutMeSection: FC = () => {
                     </Link>
                   </li>
                   <li className="cursor-pointer flex items-center justify-center transition transform hover:scale-125 hover:text-purple-500">
-                  <Link href="https://github.com/ifilipe-lype" passHref>
+                    <Link href="https://github.com/ifilipe-lype" passHref>
                       <a target="blank">
                         <svg
                           aria-hidden="true"
@@ -149,7 +166,7 @@ const AboutMeSection: FC = () => {
                     </Link>
                   </li>
                   <li className="cursor-pointer flex items-center justify-center transition transform hover:scale-125 hover:text-purple-500">
-                  <Link href="mailto:filipeantonioandre@gmail.com" passHref>
+                    <Link href="mailto:filipeantonioandre@gmail.com" passHref>
                       <a target="blank">
                         <svg
                           aria-hidden="true"

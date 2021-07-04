@@ -65,7 +65,7 @@ const skillItemVariants = {
 
 const SkillSection: FC = () => {
   return (
-    <section className="py-16 lg:py-24 bg-purple-900">
+    <section id="skills" className="py-16 lg:py-24 bg-purple-900">
       <div className="container max-w-screen-lg flex flex-col justify-center mb-10 md:mb-16 items-center">
         <motion.header initial={{y: "100vh"}} animate={{ y: 0}} className="flex flex-col text-white justify-center items-center text-center">
           <h1 className="text-xl md:text-2xl lg:text-3xl uppercase mb-2">
