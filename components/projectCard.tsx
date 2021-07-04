@@ -7,6 +7,8 @@ interface ProjectProps {
   image: any
   description: string
   tecnologies: string[]
+  src_link: string
+  live_link: string
 }
 
 const ProjectCard: FC<ProjectProps> = ({
@@ -14,21 +16,22 @@ const ProjectCard: FC<ProjectProps> = ({
   image,
   description,
   tecnologies,
+  live_link,
+  src_link,
 }) => {
   return (
     <article>
-      <figure className="relative bg-gray-200 w-full h-64 lg:h-72 rounded object-center object-cover">
-        <Image
-          src={image}
-          alt={name}
-          layout="fill"
-          objectFit="cover"
-        />
-      </figure>
-      <figcaption className="mt-2">
-        <h2 className="lg:text-lg font-semibold text-gray-700 dark:text-white">
-          {name}
-        </h2>
+      <Link href={live_link}>
+        <div className="block relative transform hover:scale-105 transition cursor-pointer bg-gray-200 w-full h-64 lg:h-72 rounded object-center object-cover">
+          <Image src={image} alt={name} layout="fill" objectFit="cover" />
+        </div>
+      </Link>
+      <div className="mt-2">
+        <Link href={live_link}>
+          <h2 className="lg:text-lg cursor-pointer hover:underline transition font-semibold text-gray-700 dark:text-white">
+            {name}
+          </h2>
+        </Link>
         <div className="my-1 -mx-1 text-xs flex flex-wrap items-center">
           {tecnologies.map((tec) => (
             <span
@@ -44,8 +47,8 @@ const ProjectCard: FC<ProjectProps> = ({
         </p>
         <div className="py-2 flex flex-row items-center">
           <div className="flex text-gray-500 flex-row items-center justify-between">
-            <Link href="#">
-              <div className="flex px-4 py-1 rounded-lg border-purple-400 hover:border-purple-500 transition text-purple-500 hover:text-purple-700 cursor-pointer border items-center text-sm">
+            <Link href={live_link}>
+              <div className="flex transform hover:scale-105 px-4 py-1 rounded-lg border-purple-400 hover:border-purple-500 transition text-purple-500 hover:text-purple-700 cursor-pointer border items-center text-sm">
                 <span>See it live</span>
                 <span>
                   <svg
@@ -65,8 +68,8 @@ const ProjectCard: FC<ProjectProps> = ({
                 </span>
               </div>
             </Link>
-            <div className="flex ml-4 p-1 cursor-pointer transition hover:text-gray-800 dark:hover:text-white items-center text-sm">
-              <Link href="go.com">
+            <div className="flex transform hover:scale-105 ml-4 p-1 cursor-pointer transition hover:text-gray-800 dark:hover:text-white items-center text-sm">
+              <Link href={src_link}>
                 <span>
                   <svg
                     aria-hidden="true"
@@ -88,7 +91,7 @@ const ProjectCard: FC<ProjectProps> = ({
             </div>
           </div>
         </div>
-      </figcaption>
+      </div>
     </article>
   )
 }

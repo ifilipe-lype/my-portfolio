@@ -1,91 +1,92 @@
-import { FC } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
-const AboutMeSection: FC = () => {
+import ThemeSwitcher from './theme-switcher'
+
+const MobileMenu = ({ show, hideMenu }) => {
   return (
-    <section
-      className="relative dark:bg-gray-800 bg-center bg-cover"
-      style={{
-        backgroundImage:
-          'url(https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80)',
-      }}
-    >
-      <div className="absolute w-full h-full inset-0 bg-purple-900 bg-opacity-80"></div>
-      <div className="relative py-16 lg:py-24 z-10 container max-w-screen-lg flex flex-col justify-center items-center">
-        <div className="w-full flex flex-col  md:flex-row items-center justify-between">
-          <motion.div initial={{x: "-100vw", opacity: 0}} animate={{opacity: 1, x: 0}} className="relative hidden md:block bg-purple-900 bg-opacity-60 shadow-lg min-h-500 rounded-lg w-5/12">
-            <Image
-              src="/lype.jpg"
-              layout="fill"
-              alt="Filipe André's Photo"
-              className="block w-full h-auto object-cover object-top rounded-lg"
-            />
-          </motion.div>
-          <motion.div initial={{x: "100vw"}} animate={{ x: 0}} className="w-full md:w-7/12 md:py-8 flex items-center">
-            <div className="pb-8 px-4  lg:p-8 shadow-lg bg-gray-900 bg-opacity-60 text-white md:rounded-l-none h-full rounded-md">
-              <motion.div initial={{y: 25, opacity: 0}} animate={{ y: -55, opacity: 1}}
-                style={{
-                  backgroundImage: 'url(/lype.jpg)',
-                }}
-                className="md:hidden mx-auto bg-cover bg-top transform -translate-y-12 w-48 h-48 rounded-full"
-              ></motion.div>
-              <header className="mb-1 flex flex-col md:items-start items-center">
-                <h1 className="text-2xl md:text-3xl">Filipe André (Lype)</h1>
-                <span className="block w-9/12 h-1 my-2 border-t border-gray-400"></span>
-              </header>
-              <div className="flex flex-col md:items-start items-center">
-                <h3 className="flex items-center text-purple-500">
-                  <span className="mr-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
-                        clipRule="evenodd"
-                      />
-                      <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
-                    </svg>
+    <AnimatePresence>
+      {show && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ x: "-100vw", opacity: 0 }}
+          className="fixed h-screen w-full bg-transparent inset-0 z-40 flex flex-col items-center"
+        >
+          <div
+            onClick={() => hideMenu(false)}
+            className="absolute bg-gray-900 bg-opacity-60 w-full h-full"
+          ></div>
+          <motion.div
+            initial={{ y: '-100vh' }}
+            animate={{ y: 0 }}
+            className="relative w-full max-w-screen-lg bg-white dark:bg-gray-900"
+          >
+            <div className="flex container justify-between py-4 items-center">
+              <h1 className="flex items-center">
+                <div className="relative w-8 h-8 md:w-10 md:h-10 border mr-4 rounded-full overflow-hidden">
+                  <Image
+                    src="/lype.jpg"
+                    alt="Filipe André's Picture"
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="top"
+                  />
+                </div>
+                <div className="flex items-center">
+                  <span className="leading-none dark:text-white text-gray-700 font-semibold">
+                    Lype
                   </span>
-                  <span className="text-lg">Software Developer</span>
-                </h3>
-                <h4 className="flex items-center">
-                  <span className="mr-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                      />
-                    </svg>
-                  </span>
-                  <span>Luanda, Angola - (remote)</span>
-                </h4>
+                </div>
+              </h1>
+
+              <div className="flex items-center">
+                <div className="flex items-center">
+                  <ThemeSwitcher />
+                </div>
+                <button
+                  onClick={hideMenu}
+                  className="ml-6 outline-none text-purple-400 focus:ring-purple-500 focus:text-purple-500 focus:outline-none md:hidden flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
               </div>
-              <div className="py-4 text-center md:text-left text-sm md:text-base leading-tight font-light">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Repellendus error laudantium veniam voluptates, dolor
-                  inventore maiores placeat necessitatibus expedita? Sit
-                  recusandae praesentium in adipisci quos consectetur magnam
-                  nobis neque ducimus?
-                </p>
-              </div>
-              <div className="mt-4">
-                <ul className="flex w-full md:w-6/12 text-gray-200 items-center justify-around md:justify-between">
-                  <li className="cursor-pointer flex items-center justify-center transition transform hover:scale-125 hover:text-purple-500">
+            </div>
+            <ul className="navigation-items container w-full flex text-base flex-col text-center items-center text-gray-500 dark:text-gray-200 font-light">
+              <li>
+                <span>Home</span>
+              </li>
+              <li>
+                <span>Portfolio</span>
+              </li>
+              <li>
+                <span>Skills</span>
+              </li>
+              <li>
+                <span>About me</span>
+              </li>
+            </ul>
+
+            <div className="bg-purple-900 container py-6 mt-4 text-purple-300">
+              <h4 className="text-sm font-light text-center">Reach me by</h4>
+
+              <div className="mt-4 flex w-full items-center">
+                <ul className="flex w-full  items-center justify-evenly">
+                  <li className="cursor-pointer flex items-center justify-center text-purple-300 hover:text-white">
                     <Link href="#">
                       <span>
                         <svg
@@ -106,7 +107,7 @@ const AboutMeSection: FC = () => {
                       </span>
                     </Link>
                   </li>
-                  <li className="cursor-pointer flex items-center justify-center transition transform hover:scale-125 hover:text-purple-500">
+                  <li className="cursor-pointer flex items-center justify-center text-purple-300 hover:text-white">
                     <Link href="#">
                       <span>
                         <svg
@@ -127,7 +128,7 @@ const AboutMeSection: FC = () => {
                       </span>
                     </Link>
                   </li>
-                  <li className="cursor-pointer flex items-center justify-center transition transform hover:scale-125 hover:text-purple-500">
+                  <li className="cursor-pointer flex items-center justify-center text-purple-300 hover:text-white">
                     <Link href="#">
                       <span>
                         <svg
@@ -148,7 +149,7 @@ const AboutMeSection: FC = () => {
                       </span>
                     </Link>
                   </li>
-                  <li className="cursor-pointer flex items-center justify-center transition transform hover:scale-125 hover:text-purple-500">
+                  <li className="cursor-pointer flex items-center justify-center text-purple-300 hover:text-white">
                     <Link href="#">
                       <span>
                         <svg
@@ -173,13 +174,10 @@ const AboutMeSection: FC = () => {
               </div>
             </div>
           </motion.div>
-        </div>
-      </div>
-      <footer className="relative container text-center md:text-left text-gray-200 text-sm max-w-screen-lg w-full py-4">
-        <span>&copy; 2021 Lype . All rights reserved</span>
-      </footer>
-    </section>
+        </motion.div>
+      )}
+    </AnimatePresence>
   )
 }
 
-export default AboutMeSection
+export default MobileMenu
