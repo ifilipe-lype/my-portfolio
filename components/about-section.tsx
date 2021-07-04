@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 const AboutMeSection: FC = () => {
   return (
@@ -14,22 +15,22 @@ const AboutMeSection: FC = () => {
       <div className="absolute w-full h-full inset-0 bg-purple-900 bg-opacity-80"></div>
       <div className="relative py-16 lg:py-24 z-10 container max-w-screen-lg flex flex-col justify-center items-center">
         <div className="w-full flex flex-col  md:flex-row items-center justify-between">
-          <div
-            style={{
-              backgroundImage: 'url(/lype.jpg)',
-            }}
-            className="relative bg-cover bg-top transform md:transform-none translate-y-24 w-48 h-48 md:h-full rounded-full md:rounded-lg overflow-hidden md:w-5/12"
-          >
-            <img
+          <motion.div initial={{x: "-100vw", opacity: 0}} animate={{opacity: 1, x: 0}} className="relative hidden md:block bg-purple-900 min-h-500 rounded-lg w-5/12">
+            <Image
               src="/lype.jpg"
               layout="fill"
               alt="Filipe André's Photo"
-              className="hidden lg:block w-full h-auto object-cover"
+              className="block w-full h-auto object-cover object-top rounded-lg"
             />
-          </div>
-          <div className="w-full md:w-7/12 md:py-8 flex items-center">
-            <div className="py-8 px-4 sm:p-8 shadow-lg bg-gray-900 bg-opacity-60 text-white md:rounded-l-none h-full rounded-md">
-              <div className="md:hidden h-24"></div>
+          </motion.div>
+          <motion.div initial={{x: "100vw"}} animate={{ x: 0}} className="w-full md:w-7/12 md:py-8 flex items-center">
+            <div className="pb-8 px-4  lg:p-8 shadow-lg bg-gray-900 bg-opacity-60 text-white md:rounded-l-none h-full rounded-md">
+              <motion.div initial={{y: 25, opacity: 0}} animate={{ y: -55, opacity: 1}}
+                style={{
+                  backgroundImage: 'url(/lype.jpg)',
+                }}
+                className="md:hidden mx-auto bg-cover bg-top transform -translate-y-12 w-48 h-48 rounded-full"
+              ></motion.div>
               <header className="mb-1 flex flex-col md:items-start items-center">
                 <h1 className="text-2xl md:text-3xl">Filipe André (Lype)</h1>
                 <span className="block w-9/12 h-1 my-2 border-t border-gray-400"></span>
@@ -70,7 +71,7 @@ const AboutMeSection: FC = () => {
                       />
                     </svg>
                   </span>
-                  <span>Angola - Luanda (remote)</span>
+                  <span>Luanda, Angola - (remote)</span>
                 </h4>
               </div>
               <div className="py-4 text-center md:text-left text-sm md:text-base leading-tight font-light">
@@ -84,7 +85,7 @@ const AboutMeSection: FC = () => {
               </div>
               <div className="mt-4">
                 <ul className="flex w-full md:w-6/12 text-gray-200 items-center justify-around md:justify-between">
-                  <li className="cursor-pointer flex items-center justify-center hover:text-purple-500">
+                  <li className="cursor-pointer flex items-center justify-center transition transform hover:scale-125 hover:text-purple-500">
                     <Link href="#">
                       <span>
                         <svg
@@ -105,7 +106,7 @@ const AboutMeSection: FC = () => {
                       </span>
                     </Link>
                   </li>
-                  <li className="cursor-pointer flex items-center justify-center hover:text-purple-500">
+                  <li className="cursor-pointer flex items-center justify-center transition transform hover:scale-125 hover:text-purple-500">
                     <Link href="#">
                       <span>
                         <svg
@@ -126,7 +127,7 @@ const AboutMeSection: FC = () => {
                       </span>
                     </Link>
                   </li>
-                  <li className="cursor-pointer flex items-center justify-center hover:text-purple-500">
+                  <li className="cursor-pointer flex items-center justify-center transition transform hover:scale-125 hover:text-purple-500">
                     <Link href="#">
                       <span>
                         <svg
@@ -147,7 +148,7 @@ const AboutMeSection: FC = () => {
                       </span>
                     </Link>
                   </li>
-                  <li className="cursor-pointer flex items-center justify-center hover:text-purple-500">
+                  <li className="cursor-pointer flex items-center justify-center transition transform hover:scale-125 hover:text-purple-500">
                     <Link href="#">
                       <span>
                         <svg
@@ -171,13 +172,12 @@ const AboutMeSection: FC = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-
       </div>
-        <footer className="relative container text-center md:text-left text-gray-200 text-sm max-w-screen-lg w-full py-4">
-            <span>&copy; 2021 Lype . All rights reserved</span>
-        </footer>
+      <footer className="relative container text-center md:text-left text-gray-200 text-sm max-w-screen-lg w-full py-4">
+        <span>&copy; 2021 Lype . All rights reserved</span>
+      </footer>
     </section>
   )
 }
