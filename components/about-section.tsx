@@ -15,7 +15,7 @@ const AboutMeSection: FC = () => {
       <div className="absolute w-full h-full inset-0 bg-purple-900 bg-opacity-80"></div>
       <div className="relative py-16 lg:py-24 z-10 container max-w-screen-lg flex flex-col justify-center items-center">
         <div className="w-full flex flex-col  md:flex-row items-center justify-between">
-          <motion.div initial={{x: "-100vw", opacity: 0}} animate={{opacity: 1, x: 0}} className="relative hidden md:block bg-purple-900 min-h-500 rounded-lg w-5/12">
+          <motion.div initial={{x: "-100vw", opacity: 0}} animate={{opacity: 1, x: 0}} className="relative hidden md:block bg-purple-900 bg-opacity-60 shadow-lg min-h-500 rounded-lg w-5/12">
             <Image
               src="/lype.jpg"
               layout="fill"
