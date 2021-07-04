@@ -10,7 +10,7 @@ interface Skill {
 const SkillCard: FC<Skill> = ({ logo, name }) => {
   return (
     <article className="flex flex-col items-center justify-center">
-      <div className="relative w-20 h-20 md:w-24 md:h-24">
+      <div className="relative w-16 h-16 md:w-20 md:h-20">
         <Image
           src={logo}
           sizes="100%"
@@ -19,7 +19,7 @@ const SkillCard: FC<Skill> = ({ logo, name }) => {
           alt={name}
         />
       </div>
-      <h5 className="md:text-lg text-white">{name}</h5>
+      <h5 className="text-sm md:text-lg text-white">{name}</h5>
     </article>
   )
 }
@@ -36,6 +36,7 @@ const skills: Skill[] = [
     { logo: "/icons/mongodb.png", name: "MongoDB"},
     { logo: "/icons/git.png", name: "Git"},
     { logo: "/icons/github.png", name: "Github"},
+    { logo: "/icons/jest.png", name: "TDD, Jest"},
 ]
 
 const skillsListVariants = {
@@ -65,7 +66,7 @@ const skillItemVariants = {
 
 const SkillSection: FC = () => {
   return (
-    <section className="py-16 lg:py-24 bg-purple-900">
+    <section id="skills" className="py-16 lg:py-24 bg-purple-900">
       <div className="container max-w-screen-lg flex flex-col justify-center mb-10 md:mb-16 items-center">
         <motion.header initial={{y: "100vh"}} animate={{ y: 0}} className="flex flex-col text-white justify-center items-center text-center">
           <h1 className="text-xl md:text-2xl lg:text-3xl uppercase mb-2">
@@ -80,7 +81,7 @@ const SkillSection: FC = () => {
 
       <div className="container max-w-screen-lg">
         <motion.ul variants={skillsListVariants} animate="animate" initial="initial"
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {
               skills.map((skill, index) => (
                   <motion.li variants={skillItemVariants} key={index}>

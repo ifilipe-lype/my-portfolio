@@ -60,11 +60,10 @@ export default function HeroSection() {
             <h3 className="text-2xl text-purple-500 font-semibold lg:text-4xl">
               Software Developer
             </h3>
-            <div className="block my-2">
-              <p className="text-base lg:p-4 lg:pl-0 lg:bg-white lg:dark:bg-gray-900 rounded-lg">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
-                neque incidunt et tenetur placeat unde facilis nostrum at
-                exercitationem.
+            <div className="flex my-2">
+              <p className="text-base lg:text-lg leading-tight lg:p-4 lg:pl-0 lg:bg-white lg:dark:bg-gray-900 rounded-lg">
+                I love building software solutions for real life problem that
+                really impact people&apos;s life
               </p>
             </div>
           </motion.div>
@@ -72,14 +71,15 @@ export default function HeroSection() {
             variants={childVariants}
             className="flex w-9/12 mx-auto md:w-full lg:mx-0 md:flex-row text-center flex-col items-center mt-8"
           >
-            <span className="mb-4 md:mb-0 cursor-pointer glow-hover transition w-full lg:w-auto px-4 py-2 lg:px-6 lg:py-3 md:mr-8 bg-purple-500 hover:bg-purple-600 text-white rounded-lg"
-            >
-              Hire me
-            </span>
-            <Link href="#portfolio">
-              <span className="w-full transition glow-hover cursor-pointer lg:w-auto shadow px-4 py-2 lg:px-6 lg:py-3 bg-gray-700 hover:bg-gray-800 text-gray-100 rounded-lg">
-                See my works
+            <Link href="#about" passHref>
+              <span className="mb-4 md:mb-0 cursor-pointer glow-hover transition w-full lg:w-auto px-4 py-2 lg:px-6 lg:py-3 md:mr-8 bg-purple-500 hover:bg-purple-600 text-white rounded-lg">
+                Let&apos;s talk
               </span>
+            </Link>
+            <Link href="#portfolio" passHref>
+              <a className="w-full transition glow-hover cursor-pointer lg:w-auto shadow px-4 py-2 lg:px-6 lg:py-3 bg-gray-700 hover:bg-gray-800 text-gray-100 rounded-lg">
+                See my works
+              </a>
             </Link>
           </motion.div>
         </motion.article>
