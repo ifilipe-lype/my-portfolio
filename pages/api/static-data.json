@@ -1,22 +1,58 @@
 {
   "projects": [
     {
-      "name": "WebSite for Local Business",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit Beatae, quas praesentium nesciunt a corporis eligendi nobis.",
+      "name": "My portfolio",
+      "description": "This is a website for showcase my experience in software development :)",
       "date": "",
-      "image": "/avatar-original.jpg",
-      "tecnologies": ["ReactJS", "Tailwindcss", "NextJS"],
-      "live_link": "",
+      "image": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625656578/portfolio_assets/projects/Optimized-Screenshot_2021-07-07_at_12-13-52_Filipe_Andr%C3%A9_Lype_u1cdvm.jpg",
+      "tecnologies": ["ReactJS", "Tailwindcss", "NextJS", "TypeScript"],
+      "live_link": "https://filipeandre.vercel.app",
       "src_link": ""
     },
     {
-      "name": "WebSite for Local Business",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit Beatae, quas praesentium nesciunt a corporis eligendi nobis.",
+      "name": "Authentication App",
+      "description": "An example of authentication on react apps powered by jwt based APIs",
       "date": "",
-      "image": "/avatar-original.jpg",
-      "tecnologies": ["ReactJS", "Tailwindcss", "NextJS"],
+      "image": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625576266/portfolio_assets/projects/auth-app_xbtw4z.png",
+      "tecnologies": ["ReactJS", "Tailwindcss", "NextJS", "formik", "yup"],
+      "live_link": "https://authentication-app-lype.vercel.app",
+      "src_link": "https://github.com/ifilipe-lype/authentication-app"
+    },
+    {
+      "name": "Authentication API",
+      "description": "A REST API for JWT based authentication with support for profile picture uploading",
+      "date": "",
+      "image": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625655999/portfolio_assets/projects/Screenshot-from-2021-07-07-11-58-20_ir7g12.jpg",
+      "tecnologies": ["NodeJS", "MongoDB", "ExpressJS", "Cloudinary-api", "formidable", "Joi", "bcryptjs", "tdd, jest"],
       "live_link": "",
+      "src_link": "https://github.com/ifilipe-lype/authentication-api"
+    },
+    {
+      "name": "Image Uploader",
+      "description": "A Image uploading app with support for drag and drop, file input choosing.",
+      "date": "",
+      "image": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625576267/portfolio_assets/projects/Screenshot_from_2021-05-15_16-34-01_dvldxu.png",
+      "tecnologies": ["ReactJS", "Tailwindcss", "NextJS", "formidable", "react-dropzone", "cloundinary-api"],
+      "live_link": "https://image-uploader-phi.vercel.app/",
+      "src_link": "https://github.com/ifilipe-lype/image-uploader"
+    },
+    {
+      "name": "Whatakids",
+      "description": "A web application that aims to teach children about financial intelligence through videos and interactive games",
+      "date": "",
+      "image": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625653732/portfolio_assets/projects/Optimized-Screenshot_2021-07-07_at_11-26-30_Whatakids_yavnru.jpg",
+      "tecnologies": ["HTML", "Tailwindcss", "JS", "CSS", "videojs"],
+      "live_link": "https://whatakids.co.ao/",
       "src_link": ""
+    },
+    {
+      "name": "Tazker API",
+      "description": "A Nodejs Rest API for managing tasks by breaking it in smaller, simpler, and manageable subtasks.",
+      "date": "",
+      "image": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625655999/portfolio_assets/projects/Screenshot-from-2021-07-07-11-58-20_ir7g12.jpg",
+      "tecnologies": ["NodeJS", "Mongoose", "ExpressJS", "Joi", "bcryptjs", "tdd, jest"],
+      "live_link": "",
+      "src_link": "https://github.com/ifilipe-lype/tazker-rest_api"
     }
   ],
   "skills": [
