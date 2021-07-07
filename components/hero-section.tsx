@@ -40,7 +40,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, x: 0 }}
           className="w-full lg:w-8/12 h-full bg-cover bg-purple-900 bg-center bg-no-repeat absolute lg:right-0"
           style={{
-            backgroundImage: `url(/avatar.jpg)`,
+            backgroundImage: `url(https://res.cloudinary.com/dvjnagd3i/image/upload/v1625651133/portfolio_assets/background_qsehvo.jpg)`,
           }}
         ></motion.div>
         <div className="w-full lg:w-8/12 h-full bg-gray-900 bg-opacity-40 md:bg-opacity-30 absolute right-0"></div>
