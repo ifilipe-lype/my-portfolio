@@ -6,11 +6,11 @@ import ThemeSwitcher from './theme-switcher'
 import { FC } from 'react'
 
 interface MobileMenuProps {
-  show: Boolean
-  hideMenu: () => {}
+  show: boolean
+  setShow: (value: boolean) => void
 }
 
-const MobileMenu: FC<MobileMenuProps> = ({ show, hideMenu }) => {
+const MobileMenu: FC<MobileMenuProps> = ({ show, setShow }) => {
   return (
     <AnimatePresence>
       {show && (
@@ -21,7 +21,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, hideMenu }) => {
           className="fixed h-screen w-full bg-transparent inset-0 z-40 flex flex-col items-center"
         >
           <div
-            onClick={() => hideMenu()}
+            onClick={() => setShow(false)}
             className="absolute bg-gray-900 bg-opacity-60 w-full h-full"
           ></div>
           <motion.div
@@ -56,7 +56,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, hideMenu }) => {
                   <ThemeSwitcher />
                 </div>
                 <button
-                  onClick={hideMenu}
+                  onClick={() => setShow(false)}
                   className="ml-6 outline-none text-purple-400 focus:ring-purple-500 focus:text-purple-500 focus:outline-none md:hidden flex items-center justify-center"
                 >
                   <svg
@@ -78,28 +78,28 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, hideMenu }) => {
             </div>
             <ul className="navigation-items container w-full flex text-base flex-col text-center items-center text-gray-500 dark:text-gray-200 font-light">
               <li>
-                <Link href="#">
+                <Link href="#" passHref>
                   <span>
                     <a>Home</a>
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="#portfolio">
+                <Link href="#portfolio" passHref>
                   <span>
                     <a>Portfolio</a>
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="#skills">
+                <Link href="#skills" passHref>
                   <span>
                     <a>Skills</a>
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="#about">
+                <Link href="#about" passHref>
                   <span>
                     <a>About me</a>
                   </span>
