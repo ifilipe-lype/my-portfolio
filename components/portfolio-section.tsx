@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import ProjectCard from './projectCard'
 import Loading from './loading'
@@ -32,7 +32,15 @@ const itemVariants = {
 }
 
 export default function PortfolioSection() {
-  const [projects, setProjets] = useState([])
+  const [projects, setProjets] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const response = await fetch("/api/projects");
+      const data = await response.json()
+      setProjets(data);
+    })()
+  }, [])
 
   return (
     <section
