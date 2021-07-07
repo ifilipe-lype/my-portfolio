@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "My portfolio",
-      "description": "This is a website for showcase my experience in software development :)",
+      "description": "This is an website for showcase my experience in software development :)",
       "date": "",
       "image": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625656578/portfolio_assets/projects/Optimized-Screenshot_2021-07-07_at_12-13-52_Filipe_Andr%C3%A9_Lype_u1cdvm.jpg",
       "tecnologies": ["ReactJS", "Tailwindcss", "NextJS", "TypeScript"],
