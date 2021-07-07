@@ -49,7 +49,7 @@ export default function Header() {
                   </div>
                   <div className="flex items-center">
                     <span className="md:text-lg leading-none dark:text-white text-gray-700 font-semibold">
-                      Lype
+                      Filipe André
                     </span>
                   </div>
                 </a>
