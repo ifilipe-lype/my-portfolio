@@ -124,7 +124,7 @@ export default function Header() {
               </a>
             </Link>
           </div>
-          <MobileMenu show={isMenuOpen} hideMenu={() => setIsMenuOpen(false)} />
+          <MobileMenu show={isMenuOpen} setShow={setIsMenuOpen} />
         </nav>
       </div>
     </motion.header>
