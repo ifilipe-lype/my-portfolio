@@ -8,6 +8,29 @@
       "tecnologies": ["ReactJS", "Tailwindcss", "NextJS"],
       "live_link": "",
       "src_link": ""
+    },
+    {
+      "name": "WebSite for Local Business",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit Beatae, quas praesentium nesciunt a corporis eligendi nobis.",
+      "date": "",
+      "image": "/avatar-original.jpg",
+      "tecnologies": ["ReactJS", "Tailwindcss", "NextJS"],
+      "live_link": "",
+      "src_link": ""
     }
+  ],
+  "skills": [
+    { "logo": "/icons/html-5.png", "name": "HTML5" },
+    { "logo": "/icons/css-3.png", "name": "CSS3" },
+    { "logo": "/icons/js.png", "name": "JavaScript" },
+    { "logo": "/icons/tailwindcss.png", "name": "Tailwindcss" },
+    { "logo": "/icons/reactjs.png", "name": "ReactJS" },
+    { "logo": "/icons/nextjs.png", "name": "NextJS" },
+    { "logo": "/icons/ts.png", "name": "TypeScript" },
+    { "logo": "/icons/nodejs.png", "name": "NodeJS" },
+    { "logo": "/icons/mongodb.png", "name": "MongoDB" },
+    { "logo": "/icons/git.png", "name": "Git" },
+    { "logo": "/icons/github.png", "name": "Github" },
+    { "logo": "/icons/jest.png", "name": "TDD, Jest" }
   ]
 }
