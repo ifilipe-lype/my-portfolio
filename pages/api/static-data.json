@@ -1,0 +1,13 @@
+{
+  "projects": [
+    {
+      "name": "WebSite for Local Business",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit Beatae, quas praesentium nesciunt a corporis eligendi nobis.",
+      "date": "",
+      "image": "/avatar-original.jpg",
+      "tecnologies": ["ReactJS", "Tailwindcss", "NextJS"],
+      "live_link": "",
+      "src_link": ""
+    }
+  ]
+}
