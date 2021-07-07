@@ -20,17 +20,17 @@
     }
   ],
   "skills": [
-    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572372/portfolio_assets/html-5_rozjxt.png", "name": "HTML5" },
-    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572372/portfolio_assets/css-3_yudyue.png", "name": "CSS3" },
-    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572373/portfolio_assets/js_pnrckl.png", "name": "JavaScript" },
-    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572374/portfolio_assets/tailwindcss_t9ngdt.png", "name": "Tailwindcss" },
-    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572373/portfolio_assets/reactjs_oq4oyh.png", "name": "ReactJS" },
-    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572373/portfolio_assets/nextjs_cpdroq.png", "name": "NextJS" },
-    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572373/portfolio_assets/ts_wrcilu.png", "name": "TypeScript" },
-    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572373/portfolio_assets/nodejs_xmbj2w.png", "name": "NodeJS" },
-    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572373/portfolio_assets/mongodb_xnkv3v.png", "name": "MongoDB" },
-    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572372/portfolio_assets/git_vbx3lw.png", "name": "Git" },
-    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572372/portfolio_assets/github_cwudyp.png", "name": "Github" },
-    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572372/portfolio_assets/jest_ofxf7p.png", "name": "TDD, Jest" }
+    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572372/portfolio_assets/skills/html-5_rozjxt.png", "name": "HTML5" },
+    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572372/portfolio_assets/skills/css-3_yudyue.png", "name": "CSS3" },
+    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572373/portfolio_assets/skills/js_pnrckl.png", "name": "JavaScript" },
+    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572374/portfolio_assets/skills/tailwindcss_t9ngdt.png", "name": "Tailwindcss" },
+    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572373/portfolio_assets/skills/reactjs_oq4oyh.png", "name": "ReactJS" },
+    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572373/portfolio_assets/skills/nextjs_cpdroq.png", "name": "NextJS" },
+    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572373/portfolio_assets/skills/ts_wrcilu.png", "name": "TypeScript" },
+    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572373/portfolio_assets/skills/nodejs_xmbj2w.png", "name": "NodeJS" },
+    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572373/portfolio_assets/skills/mongodb_xnkv3v.png", "name": "MongoDB" },
+    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572372/portfolio_assets/skills/git_vbx3lw.png", "name": "Git" },
+    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572372/portfolio_assets/skills/github_cwudyp.png", "name": "Github" },
+    { "logo": "https://res.cloudinary.com/dvjnagd3i/image/upload/v1625572372/portfolio_assets/skills/jest_ofxf7p.png", "name": "TDD, Jest" }
   ]
 }
