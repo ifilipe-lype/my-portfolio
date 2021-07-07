@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { projects } from "./static-data.json";
+import data from "./static-data.json";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse){
-    res.status(200).json(projects)
+    res.status(200).json(data.projects)
 }
