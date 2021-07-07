@@ -19,16 +19,19 @@ const ProjectCard: FC<ProjectProps> = ({
   live_link,
   src_link,
 }) => {
+
+  const duplexLinkValue = live_link || src_link;
+
   return (
     <article>
-      <Link href={live_link || src_link} passHref>
-        <a target="blank" className="block relative transform hover:scale-105 transition cursor-pointer bg-gray-200 w-full h-64 lg:h-72 rounded object-center object-cover">
+      <Link href={duplexLinkValue} passHref>
+        <a target={ duplexLinkValue !== "#" ? "blank" : "_self"} className="block relative transform hover:scale-105 transition cursor-pointer bg-gray-200 w-full h-64 lg:h-72 rounded object-center object-cover">
           <Image src={image} alt={name} layout="fill" objectFit="cover" />
         </a>
       </Link>
       <div className="mt-2">
-        <Link href={live_link || src_link} passHref>
-          <a target="blank" className="lg:text-lg cursor-pointer hover:underline transition font-semibold text-gray-700 dark:text-white">
+        <Link href={duplexLinkValue} passHref>
+          <a target={ duplexLinkValue !== "#" ? "blank" : "_self"} className="lg:text-lg cursor-pointer hover:underline transition font-semibold text-gray-700 dark:text-white">
             {name}
           </a>
         </Link>
@@ -48,7 +51,7 @@ const ProjectCard: FC<ProjectProps> = ({
         <div className="py-2 flex flex-row items-center">
           <div className="flex text-gray-500 flex-row items-center justify-between">
             
-              {live_link && (
+              {live_link && live_link !=="#" && (
                 <Link href={live_link} passHref>
                   <a target="blank" className="flex transform hover:scale-105 mr-4 px-4 py-1 rounded-lg border-purple-400 hover:border-purple-500 transition text-purple-500 hover:text-purple-700 cursor-pointer border items-center text-sm">
                     <span>See it live</span>

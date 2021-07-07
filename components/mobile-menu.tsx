@@ -35,7 +35,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, hideMenu }) => {
                   <a className="flex items-center">
                     <div className="relative w-8 h-8 border mr-4 rounded-full overflow-hidden">
                       <Image
-                        src="/lype.jpg"
+                        src="https://res.cloudinary.com/dvjnagd3i/image/upload/v1625650294/portfolio_assets/avatar_vabox3.jpg"
                         alt="Filipe André's Picture"
                         layout="fill"
                         objectFit="cover"
@@ -44,7 +44,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, hideMenu }) => {
                     </div>
                     <div className="flex items-center">
                       <span className="md:text-lg leading-none dark:text-white text-gray-700 font-semibold">
-                        Lype
+                        Filipe André
                       </span>
                     </div>
                   </a>

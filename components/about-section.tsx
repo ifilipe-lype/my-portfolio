@@ -22,7 +22,7 @@ const AboutMeSection: FC = () => {
             className="relative hidden md:block bg-purple-900 bg-opacity-60 shadow-lg min-h-500 rounded-lg w-5/12"
           >
             <Image
-              src="/lype.jpg"
+              src="https://res.cloudinary.com/dvjnagd3i/image/upload/v1625650294/portfolio_assets/avatar_vabox3.jpg"
               layout="fill"
               alt="Filipe André's Photo"
               className="block w-full h-auto object-cover object-top rounded-lg"
@@ -38,7 +38,7 @@ const AboutMeSection: FC = () => {
                 initial={{ y: 25, opacity: 0 }}
                 animate={{ y: -55, opacity: 1 }}
                 style={{
-                  backgroundImage: 'url(/lype.jpg)',
+                  backgroundImage: 'url(https://res.cloudinary.com/dvjnagd3i/image/upload/v1625650294/portfolio_assets/avatar_vabox3.jpg)',
                 }}
                 className="md:hidden mx-auto bg-cover bg-top transform -translate-y-12 w-48 h-48 rounded-full"
               ></motion.div>
