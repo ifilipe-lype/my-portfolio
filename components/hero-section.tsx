@@ -62,8 +62,7 @@ export default function HeroSection() {
             </h3>
             <div className="flex my-2">
               <p className="text-base lg:text-lg leading-tight lg:p-4 lg:pl-0 lg:bg-white lg:dark:bg-gray-900 rounded-lg">
-                I love building software solutions for real life problem that
-                really impact people&apos;s life
+                I love building software solutions for real life problems that really have an impact on people&apos;s lives
               </p>
             </div>
           </motion.div>
@@ -78,7 +77,7 @@ export default function HeroSection() {
             </Link>
             <Link href="#portfolio" passHref>
               <a className="w-full transition glow-hover cursor-pointer lg:w-auto shadow px-4 py-2 lg:px-6 lg:py-3 bg-gray-700 hover:bg-gray-800 text-gray-100 rounded-lg">
-                See my works
+                See my work
               </a>
             </Link>
           </motion.div>
