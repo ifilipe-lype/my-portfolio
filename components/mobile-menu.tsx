@@ -30,8 +30,8 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, setShow }) => {
             className="relative w-full max-w-screen-lg bg-white dark:bg-gray-900"
           >
             <div className="flex container justify-between py-4 items-center">
-              <h1 className="flex items-center">
-                <Link href="#" passHref>
+              <h1 className="flex items-center" onClick={() => setShow(false)}>
+                <Link href="#home" passHref>
                   <a className="flex items-center">
                     <div className="relative w-8 h-8 border mr-4 rounded-full overflow-hidden">
                       <Image
@@ -77,28 +77,28 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, setShow }) => {
               </div>
             </div>
             <ul className="navigation-items container w-full flex text-base flex-col text-center items-center text-gray-500 dark:text-gray-200 font-light">
-              <li>
-                <Link href="#" passHref>
+              <li onClick={() => setShow(false)}>
+                <Link href="#home" passHref>
                   <span>
                     <a>Home</a>
                   </span>
                 </Link>
               </li>
-              <li>
+              <li onClick={() => setShow(false)}>
                 <Link href="#portfolio" passHref>
                   <span>
                     <a>Portfolio</a>
                   </span>
                 </Link>
               </li>
-              <li>
+              <li onClick={() => setShow(false)}>
                 <Link href="#skills" passHref>
                   <span>
                     <a>Skills</a>
                   </span>
                 </Link>
               </li>
-              <li>
+              <li onClick={() => setShow(false)}>
                 <Link href="#about" passHref>
                   <span>
                     <a>About me</a>
