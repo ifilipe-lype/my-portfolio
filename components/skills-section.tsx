@@ -53,7 +53,7 @@ const SkillSection: FC = () => {
             My Skills
           </h1>
           <h4 className="lg:text-lg">
-            See some of the tools I use to bring excelents solution alive
+            See some of the tools I use to bring excellent solutions to life
           </h4>
           <div className="h-1 w-5/12 rounded-full bg-white mt-2"></div>
         </motion.header>
