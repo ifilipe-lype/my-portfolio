@@ -61,7 +61,7 @@ export default function HeroSection() {
               Software Developer
             </h3>
             <div className="flex my-2">
-              <p className="text-base lg:text-lg leading-tight lg:p-4 lg:pl-0 lg:bg-white lg:dark:bg-gray-900 rounded-lg">
+              <p className="text-base lg:text-lg leading-tight lg:p-2 lg:pl-0 lg:bg-white lg:dark:bg-gray-900 rounded-lg">
                 I love building software solutions for real life problems that really have an impact on people&apos;s lives
               </p>
             </div>
