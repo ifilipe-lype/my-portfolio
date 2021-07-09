@@ -36,7 +36,7 @@ export default function Header() {
         <nav className="flex items-center justify-between">
           <div className="flex w-full md:w-auto justify-between items-center">
             <h1 className="flex items-center">
-              <Link href="#" passHref>
+              <Link href="#home" passHref>
                 <a className="flex items-center">
                   <div className="relative w-8 h-8 md:w-10 md:h-10 border mr-4 rounded-full overflow-hidden">
                     <Image
@@ -90,7 +90,7 @@ export default function Header() {
             <ul className="navigation-items flex text-base text-center items-center mr-4 lg:mr-8 text-gray-500 dark:text-gray-200 font-light">
               <li>
               <span>
-                  <Link href="#">
+                  <Link href="#home">
                     <a>Home</a>
                   </Link>
                 </span>

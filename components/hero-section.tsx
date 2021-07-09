@@ -33,7 +33,7 @@ const childVariants = {
 
 export default function HeroSection() {
   return (
-    <section className="">
+    <section >
       <div className="container min-h-screen relative flex justify-center lg:justify-start items-center max-w-screen-lg">
         <motion.div
           initial={{ opacity: 0, x: '100vh' }}
