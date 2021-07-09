@@ -1,5 +1,6 @@
-import Link from 'next/link'
 import { motion } from 'framer-motion'
+
+import scrollElemIntoView from '../helpers/scrollElemIntoView'
 
 const articleVariants = {
   initial: {
@@ -33,7 +34,7 @@ const childVariants = {
 
 export default function HeroSection() {
   return (
-    <section className="">
+    <section >
       <div className="container min-h-screen relative flex justify-center lg:justify-start items-center max-w-screen-lg">
         <motion.div
           initial={{ opacity: 0, x: '100vh' }}
@@ -61,7 +62,7 @@ export default function HeroSection() {
               Software Developer
             </h3>
             <div className="flex my-2">
-              <p className="text-base lg:text-lg leading-tight lg:p-4 lg:pl-0 lg:bg-white lg:dark:bg-gray-900 rounded-lg">
+              <p className="text-base lg:text-lg leading-tight lg:p-2 lg:pl-0 lg:bg-white lg:dark:bg-gray-900 rounded-lg">
                 I love building software solutions for real life problems that really have an impact on people&apos;s lives
               </p>
             </div>
@@ -70,16 +71,14 @@ export default function HeroSection() {
             variants={childVariants}
             className="flex w-9/12 mx-auto md:w-full lg:mx-0 md:flex-row text-center flex-col items-center mt-8"
           >
-            <Link href="#about" passHref>
-              <span className="mb-4 md:mb-0 cursor-pointer glow-hover transition w-full lg:w-auto px-4 py-2 lg:px-6 lg:py-3 md:mr-8 bg-purple-500 hover:bg-purple-600 text-white rounded-lg">
+              <button onClick={() => scrollElemIntoView("about")}
+                className="mb-4 md:mb-0 outline-none focus:outline-none cursor-pointer glow-hover transition w-full lg:w-auto px-4 py-2 lg:px-6 lg:py-3 md:mr-8 bg-purple-500 hover:bg-purple-600 text-white rounded-lg">
                 Let&apos;s talk
-              </span>
-            </Link>
-            <Link href="#portfolio" passHref>
-              <a className="w-full transition glow-hover cursor-pointer lg:w-auto shadow px-4 py-2 lg:px-6 lg:py-3 bg-gray-700 hover:bg-gray-800 text-gray-100 rounded-lg">
+              </button>
+              <button onClick={() => scrollElemIntoView("portfolio")}
+                className="w-full outline-none focus:outline-none transition glow-hover cursor-pointer lg:w-auto shadow px-4 py-2 lg:px-6 lg:py-3 bg-gray-700 hover:bg-gray-800 text-gray-100 rounded-lg">
                 See my work
-              </a>
-            </Link>
+              </button>
           </motion.div>
         </motion.article>
       </div>

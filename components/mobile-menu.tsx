@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
+import scrollElemIntoView from "../helpers/scrollElemIntoView"
+
 
 import ThemeSwitcher from './theme-switcher'
 import { FC } from 'react'
@@ -11,6 +13,12 @@ interface MobileMenuProps {
 }
 
 const MobileMenu: FC<MobileMenuProps> = ({ show, setShow }) => {
+
+  function scrollToSectionAndHideMenu(sectionId: string){
+    setShow(false);
+    scrollElemIntoView(sectionId);
+  }
+
   return (
     <AnimatePresence>
       {show && (
@@ -30,8 +38,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, setShow }) => {
             className="relative w-full max-w-screen-lg bg-white dark:bg-gray-900"
           >
             <div className="flex container justify-between py-4 items-center">
-              <h1 className="flex items-center">
-                <Link href="#" passHref>
+              <h1 className="flex items-center" onClick={() => scrollToSectionAndHideMenu("home")}>
                   <a className="flex items-center">
                     <div className="relative w-8 h-8 border mr-4 rounded-full overflow-hidden">
                       <Image
@@ -48,7 +55,6 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, setShow }) => {
                       </span>
                     </div>
                   </a>
-                </Link>
               </h1>
 
               <div className="flex items-center">
@@ -77,33 +83,25 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, setShow }) => {
               </div>
             </div>
             <ul className="navigation-items container w-full flex text-base flex-col text-center items-center text-gray-500 dark:text-gray-200 font-light">
-              <li>
-                <Link href="#" passHref>
-                  <span>
-                    <a>Home</a>
-                  </span>
-                </Link>
+            <li>
+                <span onClick={() => scrollToSectionAndHideMenu('home')}>
+                  <a>Home</a>
+                </span>
               </li>
               <li>
-                <Link href="#portfolio" passHref>
-                  <span>
-                    <a>Portfolio</a>
-                  </span>
-                </Link>
+                <span onClick={() => scrollToSectionAndHideMenu('portfolio')}>
+                  <a>Portfolio</a>
+                </span>
               </li>
               <li>
-                <Link href="#skills" passHref>
-                  <span>
-                    <a>Skills</a>
-                  </span>
-                </Link>
+                <span onClick={() => scrollToSectionAndHideMenu('skills')}>
+                  <a>Skills</a>
+                </span>
               </li>
-              <li>
-                <Link href="#about" passHref>
-                  <span>
-                    <a>About me</a>
-                  </span>
-                </Link>
+              <li onClick={() => scrollToSectionAndHideMenu('about')}>
+                <span>
+                  <a>About me</a>
+                </span>
               </li>
             </ul>
 

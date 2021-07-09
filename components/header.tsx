@@ -6,6 +6,8 @@ import { motion } from 'framer-motion'
 import ThemeSwitcher from './theme-switcher'
 import MobileMenu from './mobile-menu'
 
+import scrollElemIntoView from '../helpers/scrollElemIntoView'
+
 const headerVariants = {
   initial: {
     y: '-100vh',
@@ -35,25 +37,26 @@ export default function Header() {
       <div className="container py-4 max-w-screen-lg">
         <nav className="flex items-center justify-between">
           <div className="flex w-full md:w-auto justify-between items-center">
-            <h1 className="flex items-center">
-              <Link href="#" passHref>
-                <a className="flex items-center">
-                  <div className="relative w-8 h-8 md:w-10 md:h-10 border mr-4 rounded-full overflow-hidden">
-                    <Image
-                      src="https://res.cloudinary.com/dvjnagd3i/image/upload/v1625650294/portfolio_assets/avatar_vabox3.jpg"
-                      alt="Filipe André's Picture"
-                      layout="fill"
-                      objectFit="cover"
-                      objectPosition="top"
-                    />
-                  </div>
-                  <div className="flex items-center">
-                    <span className="md:text-lg leading-none dark:text-white text-gray-700 font-semibold">
-                      Filipe André
-                    </span>
-                  </div>
-                </a>
-              </Link>
+            <h1
+              className="flex items-center cursor-pointer"
+              onClick={() => scrollElemIntoView('home')}
+            >
+              <a className="flex items-center">
+                <div className="relative w-8 h-8 md:w-10 md:h-10 border mr-4 rounded-full overflow-hidden">
+                  <Image
+                    src="https://res.cloudinary.com/dvjnagd3i/image/upload/v1625650294/portfolio_assets/avatar_vabox3.jpg"
+                    alt="Filipe André's Picture"
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="top"
+                  />
+                </div>
+                <div className="flex items-center">
+                  <span className="md:text-lg leading-none dark:text-white text-gray-700 font-semibold">
+                    Filipe André
+                  </span>
+                </div>
+              </a>
             </h1>
 
             <div className="flex items-center md:hidden">
@@ -89,40 +92,32 @@ export default function Header() {
 
             <ul className="navigation-items flex text-base text-center items-center mr-4 lg:mr-8 text-gray-500 dark:text-gray-200 font-light">
               <li>
-              <span>
-                  <Link href="#">
-                    <a>Home</a>
-                  </Link>
+                <span onClick={() => scrollElemIntoView('home')}>
+                  <a>Home</a>
                 </span>
               </li>
               <li>
-              <span>
-                  <Link href="#portfolio">
-                    <a>Portfolio</a>
-                  </Link>
+                <span onClick={() => scrollElemIntoView('portfolio')}>
+                  <a>Portfolio</a>
                 </span>
               </li>
               <li>
-              <span>
-                  <Link href="#skills">
-                    <a>Skills</a>
-                  </Link>
+                <span onClick={() => scrollElemIntoView('skills')}>
+                  <a>Skills</a>
                 </span>
               </li>
-              <li>
+              <li onClick={() => scrollElemIntoView('about')}>
                 <span>
-                  <Link href="#about">
-                    <a>About me</a>
-                  </Link>
+                  <a>About me</a>
                 </span>
               </li>
             </ul>
 
-            <Link href="#about" passHref>
-              <a className="px-6 py-2 w-auto glow-hover bg-purple-500 hover:bg-purple-700 transition text-white shadow text-sm rounded-xl focus:outline-none">
+            <span onClick={() => scrollElemIntoView('about')}>
+              <a className="px-6 cursor-pointer py-2 w-auto glow-hover bg-purple-500 hover:bg-purple-700 transition text-white shadow text-sm rounded-xl focus:outline-none">
                 Let&apos;s talk
               </a>
-            </Link>
+            </span>
           </div>
           <MobileMenu show={isMenuOpen} setShow={setIsMenuOpen} />
         </nav>

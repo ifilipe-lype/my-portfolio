@@ -8,7 +8,7 @@ import AboutMeSection from '../components/about-section'
 
 export default function Home() {
   return (
-    <div>
+    <div id="home">
       <Head>
         <title>Filipe André (Lype)</title>
         <meta name="description" content="Software Developer Based on Angola" />
