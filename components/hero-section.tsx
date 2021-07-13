@@ -58,13 +58,13 @@ export default function HeroSection() {
             <h1 className="lg:text-5xl text-3xl mb-2">Filipe André</h1>
           </motion.div>
           <motion.div variants={childVariants}>
-            <h3 className="text-2xl text-purple-500 font-semibold lg:text-4xl">
+            <h2 className="text-2xl text-purple-500 font-semibold lg:text-4xl">
               Software Developer
-            </h3>
+            </h2>
             <div className="flex my-2">
-              <p className="text-base lg:text-lg leading-tight lg:p-2 lg:pl-0 lg:bg-white lg:dark:bg-gray-900 rounded-lg">
+              <h4 className="text-base lg:text-lg leading-tight lg:p-2 lg:pl-0 lg:bg-white lg:dark:bg-gray-900 rounded-lg">
                 I love building software solutions for real life problems that really have an impact on people&apos;s lives
-              </p>
+              </h4>
             </div>
           </motion.div>
           <motion.div
