@@ -18,7 +18,7 @@ const SkillCard: FC<Skill> = ({ logo, name }) => {
           alt={name}
         />
       </div>
-      <h3 className="text-sm md:text-lg text-white">{name}</h3>
+      <h3 className="text-sm mt-2 text-white">{name}</h3>
     </article>
   )
 }
