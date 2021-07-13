@@ -10,9 +10,7 @@ export default function Home() {
   return (
     <div id="home">
       <Head>
-        <title>Filipe André (Lype)</title>
-        <meta name="description" content="Software Developer Based on Angola" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Filipe André - Software Developer</title>
       </Head>
 
       <main className="">
