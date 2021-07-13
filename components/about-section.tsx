@@ -47,7 +47,7 @@ const AboutMeSection: FC = () => {
                 <span className="block w-9/12 h-1 my-2 border-t border-gray-400"></span>
               </header>
               <div className="flex flex-col md:items-start items-center">
-                <h3 className="flex items-center text-purple-500">
+                <h2 className="flex items-center text-purple-500">
                   <span className="mr-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -64,8 +64,8 @@ const AboutMeSection: FC = () => {
                     </svg>
                   </span>
                   <span className="text-lg">Software Developer</span>
-                </h3>
-                <h4 className="flex items-center">
+                </h2>
+                <h3 className="flex items-center">
                   <span className="mr-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ const AboutMeSection: FC = () => {
                     </svg>
                   </span>
                   <span>Luanda, Angola - (remote)</span>
-                </h4>
+                </h3>
               </div>
               <div className="py-4 text-center md:text-left text-sm md:text-base leading-tight font-light">
                 <p>
@@ -193,7 +193,7 @@ const AboutMeSection: FC = () => {
         </div>
       </div>
       <footer className="relative container text-center md:text-left text-gray-200 text-sm max-w-screen-lg w-full py-4">
-        <span>&copy; 2021 Lype . All rights reserved</span>
+        <span>&copy;2021 Lype . All rights reserved</span>
       </footer>
     </section>
   )
