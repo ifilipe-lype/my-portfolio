@@ -1,16 +1,15 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import Image from "next/image";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
-import ThemeSwitcher from './theme-switcher'
-import MobileMenu from './mobile-menu'
+import ThemeSwitcher from "./theme-switcher";
+import MobileMenu from "./mobile-menu";
 
-import scrollElemIntoView from '../helpers/scrollElemIntoView'
+import scrollElemIntoView from "../lib/utils/scrollElemIntoView";
 
 const headerVariants = {
   initial: {
-    y: '-100vh',
+    y: "-100vh",
     opacity: 0,
   },
   animate: {
@@ -18,14 +17,14 @@ const headerVariants = {
     opacity: 1,
     transition: {
       delay: 0.25,
-      type: 'spring',
+      type: "spring",
       stiffness: 80,
     },
   },
-}
+};
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <motion.header
@@ -39,7 +38,7 @@ export default function Header() {
           <div className="flex w-full md:w-auto justify-between items-center">
             <h1
               className="flex items-center cursor-pointer"
-              onClick={() => scrollElemIntoView('home')}
+              onClick={() => scrollElemIntoView("home")}
             >
               <a className="flex items-center">
                 <div className="relative w-8 h-8 md:w-10 md:h-10 border mr-4 rounded-full overflow-hidden">
@@ -92,28 +91,28 @@ export default function Header() {
 
             <ul className="navigation-items flex text-base text-center items-center mr-4 lg:mr-8 text-gray-500 dark:text-gray-200 font-light">
               <li>
-                <span onClick={() => scrollElemIntoView('home')}>
+                <span onClick={() => scrollElemIntoView("home")}>
                   <a>Home</a>
                 </span>
               </li>
               <li>
-                <span onClick={() => scrollElemIntoView('portfolio')}>
+                <span onClick={() => scrollElemIntoView("portfolio")}>
                   <a>Portfolio</a>
                 </span>
               </li>
               <li>
-                <span onClick={() => scrollElemIntoView('skills')}>
+                <span onClick={() => scrollElemIntoView("skills")}>
                   <a>Skills</a>
                 </span>
               </li>
-              <li onClick={() => scrollElemIntoView('about')}>
+              <li onClick={() => scrollElemIntoView("about")}>
                 <span>
                   <a>About me</a>
                 </span>
               </li>
             </ul>
 
-            <span onClick={() => scrollElemIntoView('about')}>
+            <span onClick={() => scrollElemIntoView("about")}>
               <a className="px-6 cursor-pointer py-2 w-auto glow-hover bg-purple-500 hover:bg-purple-700 transition text-white shadow text-sm rounded-xl focus:outline-none">
                 Let&apos;s talk
               </a>
@@ -123,5 +122,5 @@ export default function Header() {
         </nav>
       </div>
     </motion.header>
-  )
+  );
 }
