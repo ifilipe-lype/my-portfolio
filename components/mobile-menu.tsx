@@ -1,20 +1,18 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
-import scrollElemIntoView from "../helpers/scrollElemIntoView"
+import Image from "next/image";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import scrollElemIntoView from "../lib/utils/scrollElemIntoView";
 
-
-import ThemeSwitcher from './theme-switcher'
-import { FC } from 'react'
+import ThemeSwitcher from "./theme-switcher";
+import { FC } from "react";
 
 interface MobileMenuProps {
-  show: boolean
-  setShow: (value: boolean) => void
+  show: boolean;
+  setShow: (value: boolean) => void;
 }
 
 const MobileMenu: FC<MobileMenuProps> = ({ show, setShow }) => {
-
-  function scrollToSectionAndHideMenu(sectionId: string){
+  function scrollToSectionAndHideMenu(sectionId: string) {
     setShow(false);
     scrollElemIntoView(sectionId);
   }
@@ -25,7 +23,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, setShow }) => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ x: '-100vw', opacity: 0 }}
+          exit={{ x: "-100vw", opacity: 0 }}
           className="fixed h-screen w-full bg-transparent inset-0 z-40 flex flex-col items-center"
         >
           <div
@@ -33,28 +31,31 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, setShow }) => {
             className="absolute bg-gray-900 bg-opacity-60 w-full h-full"
           ></div>
           <motion.div
-            initial={{ y: '-100vh' }}
+            initial={{ y: "-100vh" }}
             animate={{ y: 0 }}
             className="relative w-full max-w-screen-lg bg-white dark:bg-gray-900"
           >
             <div className="flex container justify-between py-4 items-center">
-              <h1 className="flex items-center" onClick={() => scrollToSectionAndHideMenu("home")}>
-                  <a className="flex items-center">
-                    <div className="relative w-8 h-8 border mr-4 rounded-full overflow-hidden">
-                      <Image
-                        src="https://res.cloudinary.com/dvjnagd3i/image/upload/v1625650294/portfolio_assets/avatar_vabox3.jpg"
-                        alt="Filipe André's Picture"
-                        layout="fill"
-                        objectFit="cover"
-                        objectPosition="top"
-                      />
-                    </div>
-                    <div className="flex items-center">
-                      <span className="md:text-lg leading-none dark:text-white text-gray-700 font-semibold">
-                        Filipe André
-                      </span>
-                    </div>
-                  </a>
+              <h1
+                className="flex items-center"
+                onClick={() => scrollToSectionAndHideMenu("home")}
+              >
+                <a className="flex items-center">
+                  <div className="relative w-8 h-8 border mr-4 rounded-full overflow-hidden">
+                    <Image
+                      src="https://res.cloudinary.com/dvjnagd3i/image/upload/v1625650294/portfolio_assets/avatar_vabox3.jpg"
+                      alt="Filipe André's Picture"
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="top"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <span className="md:text-lg leading-none dark:text-white text-gray-700 font-semibold">
+                      Filipe André
+                    </span>
+                  </div>
+                </a>
               </h1>
 
               <div className="flex items-center">
@@ -83,22 +84,22 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, setShow }) => {
               </div>
             </div>
             <ul className="navigation-items container w-full flex text-base flex-col text-center items-center text-gray-500 dark:text-gray-200 font-light">
-            <li>
-                <span onClick={() => scrollToSectionAndHideMenu('home')}>
+              <li>
+                <span onClick={() => scrollToSectionAndHideMenu("home")}>
                   <a>Home</a>
                 </span>
               </li>
               <li>
-                <span onClick={() => scrollToSectionAndHideMenu('portfolio')}>
+                <span onClick={() => scrollToSectionAndHideMenu("portfolio")}>
                   <a>Portfolio</a>
                 </span>
               </li>
               <li>
-                <span onClick={() => scrollToSectionAndHideMenu('skills')}>
+                <span onClick={() => scrollToSectionAndHideMenu("skills")}>
                   <a>Skills</a>
                 </span>
               </li>
-              <li onClick={() => scrollToSectionAndHideMenu('about')}>
+              <li onClick={() => scrollToSectionAndHideMenu("about")}>
                 <span>
                   <a>About me</a>
                 </span>
@@ -208,7 +209,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ show, setShow }) => {
         </motion.div>
       )}
     </AnimatePresence>
-  )
-}
+  );
+};
 
-export default MobileMenu
+export default MobileMenu;
