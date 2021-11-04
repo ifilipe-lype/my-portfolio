@@ -1,23 +1,23 @@
-import { FC, useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { FC } from "react";
+import { motion } from "framer-motion";
 
-import Loading from "./loading"
-import SkillCard from './skill-card'
-
+import Loading from "./loading";
+import SkillCard from "./skill-card";
+import { Skill } from "../@types";
 
 const skillsListVariants = {
   initial: { opacity: 0 },
   animate: {
     opacity: 1,
     transition: {
-      type: 'spring', // default
+      type: "spring", // default
       mass: 0.4, // the weight of the component
       damping: 8, // the bounce back-and-forth
-      when: 'beforeChildren',
+      when: "beforeChildren",
       staggerChildren: 0.25,
     },
   },
-}
+};
 
 const skillItemVariants = {
   initial: { opacity: 0, scale: 0.8 },
@@ -25,27 +25,21 @@ const skillItemVariants = {
     opacity: 1,
     scale: 1,
     transition: {
-      type: 'spring',
+      type: "spring",
     },
   },
+};
+
+interface SkillSectionProps {
+  skills: Skill[];
 }
 
-const SkillSection: FC = () => {
-  const [skills, setSkills] = useState([])
-
-  useEffect(() => {
-    (async () => {
-      const response = await fetch("/api/skills");
-      const data = await response.json()
-      setSkills(data);
-    })()
-  }, [])
-
+const SkillSection: FC<SkillSectionProps> = ({ skills }) => {
   return (
     <section id="skills" className="py-16 lg:py-24 bg-purple-900">
       <div className="container max-w-screen-lg flex flex-col justify-center mb-10 md:mb-16 items-center">
         <motion.header
-          initial={{ y: '100vh' }}
+          initial={{ y: "100vh" }}
           animate={{ y: 0 }}
           className="flex flex-col text-white justify-center items-center text-center"
         >
@@ -67,9 +61,9 @@ const SkillSection: FC = () => {
             initial="initial"
             className="w-full grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"
           >
-            {skills.map((skill, index) => (
-              <motion.li variants={skillItemVariants} key={index}>
-                <SkillCard {...skill} />
+            {skills?.map((skill) => (
+              <motion.li variants={skillItemVariants} key={skill.id}>
+                <SkillCard data={skill} />
               </motion.li>
             ))}
           </motion.ul>
@@ -80,7 +74,7 @@ const SkillSection: FC = () => {
         )}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SkillSection
+export default SkillSection;
