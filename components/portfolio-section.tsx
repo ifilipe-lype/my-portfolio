@@ -1,8 +1,9 @@
-import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { motion } from "framer-motion";
+import { FC, useEffect, useState } from "react";
 
-import ProjectCard from './projectCard'
-import Loading from './loading'
+import ProjectCard from "./projectCard";
+import Loading from "./loading";
+import { Project } from "../@types";
 
 const listContainerVariants = {
   initial: {
@@ -11,14 +12,14 @@ const listContainerVariants = {
   animate: {
     opacity: 1,
     transition: {
-      type: 'spring', // default
+      type: "spring", // default
       mass: 0.4, // the weight of the component
       damping: 8, // the bounce back-and-forth
-      when: 'beforeChildren',
+      when: "beforeChildren",
       staggerChildren: 0.3,
     },
   },
-}
+};
 
 const itemVariants = {
   initial: { opacity: 0, y: -25 },
@@ -26,22 +27,16 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: 'spring',
+      type: "spring",
     },
   },
+};
+
+interface PortfolioSectionProps {
+  projects: Project[];
 }
 
-export default function PortfolioSection() {
-  const [projects, setProjets] = useState([]);
-
-  useEffect(() => {
-    (async () => {
-      const response = await fetch("/api/projects");
-      const data = await response.json()
-      setProjets(data);
-    })()
-  }, [])
-
+const PortfolioSection: FC<PortfolioSectionProps> = ({ projects }) => {
   return (
     <section
       id="portfolio"
@@ -49,7 +44,7 @@ export default function PortfolioSection() {
     >
       <div className="container max-w-screen-lg flex flex-col justify-center items-center">
         <motion.header
-          initial={{ y: '100vh' }}
+          initial={{ y: "100vh" }}
           animate={{ y: 0 }}
           className="flex flex-col dark:text-white justify-center mb-10 md:mb-16  items-center text-center"
         >
@@ -67,9 +62,9 @@ export default function PortfolioSection() {
             initial="initial"
             className="relative grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {projects.map((project, index) => (
-              <motion.li variants={itemVariants} key={index}>
-                <ProjectCard {...project} />
+            {projects?.map((project) => (
+              <motion.li variants={itemVariants} key={project.id}>
+                <ProjectCard data={project} />
               </motion.li>
             ))}
           </motion.ul>
@@ -80,5 +75,7 @@ export default function PortfolioSection() {
         )}
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default PortfolioSection;
