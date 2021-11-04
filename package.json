@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "framer-motion": "^4.1.17",
+    "graphql": "^16.0.1",
+    "graphql-request": "^3.6.1",
     "next": "11.0.0",
     "next-themes": "0.0.14",
     "react": "17.0.2",
