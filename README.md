@@ -56,6 +56,14 @@ yarn
 
 ```
 
+**4 - On your .env.local file adds:**
+
+```bash
+NEXT_PUBLIC_DATOCMS_API_TOKEN=your datocms read-only api access token
+```
+
+**5 - build your models in DatoCMS dashboard based on types in src/@types/index.d.ts**
+
 <br/>
 
 ## Development
@@ -83,6 +91,8 @@ Make your changes to see the magic
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+**Don't forget to add your datocms read-only api-token to NEXT_PUBLIC_DATOCMS_API_TOKEN as enviroment variable**
 
 <br/>
 

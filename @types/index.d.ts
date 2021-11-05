@@ -6,7 +6,12 @@ export interface Project {
   image: string;
   liveLink?: string;
   srcLink?: string;
-  tecnologies: { id: string; name: string }[];
+  tecnologies: Tecnology[];
+}
+
+export interface Tecnology {
+  id: string;
+  name: string;
 }
 
 export interface Skill {
