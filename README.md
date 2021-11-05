@@ -92,7 +92,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-**Don't forget to add your datocms api-token to NEXT_PUBLIC_DATOCMS_API_TOKEN as enviroment variable**
+**Don't forget to add your datocms read-only api-token to NEXT_PUBLIC_DATOCMS_API_TOKEN as enviroment variable**
 
 <br/>
 
