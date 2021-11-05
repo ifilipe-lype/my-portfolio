@@ -19,7 +19,7 @@ function request({ query, variables, preview }: RequestParams) {
   return client.request(query, variables);
 }
 
-export async function getProjects(first: number = 16, skip?: number) {
+export async function getProjects(first: number = 12, skip?: number) {
   return request({
     query: gql`
       query ($first: IntType, $skip: IntType) {
@@ -27,6 +27,7 @@ export async function getProjects(first: number = 16, skip?: number) {
           id
           name
           image
+          description
           liveLink
           srcLink
           tecnologies {
