@@ -19,7 +19,7 @@ body {
 
 @screen md {
   .navigation-items li {
-    @apply bg-transparent hover:bg-transparent dark:hover:bg-transparent my-0 dark:bg-transparent w-auto dark:hover:text-purple-500;
+    @apply bg-transparent text-sm hover:bg-transparent dark:hover:bg-transparent my-0 dark:bg-transparent w-auto dark:hover:text-purple-500;
   }
 }
 
