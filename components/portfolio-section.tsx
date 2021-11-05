@@ -4,6 +4,7 @@ import { FC } from "react";
 import ProjectCard from "./projectCard";
 import Loading from "./loading";
 import { Project } from "../@types";
+import Masonry from "react-masonry-css";
 
 const listContainerVariants = {
   initial: {
@@ -56,18 +57,26 @@ const PortfolioSection: FC<PortfolioSectionProps> = ({ projects }) => {
         </motion.header>
 
         {projects.length ? (
-          <motion.ul
-            variants={listContainerVariants}
-            animate="animate"
-            initial="initial"
-            className="relative grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          <Masonry
+            breakpointCols={{
+              default: 4,
+              1524: 3,
+              960: 2,
+              620: 1,
+            }}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column"
           >
             {projects?.map((project) => (
-              <motion.li variants={itemVariants} key={project.id}>
+              <motion.div
+                variants={itemVariants}
+                key={project.id}
+                className="w-full"
+              >
                 <ProjectCard data={project} />
-              </motion.li>
+              </motion.div>
             ))}
-          </motion.ul>
+          </Masonry>
         ) : (
           <div className="mt-4">
             <Loading className="text-purple-700 h-20 w-20" />
